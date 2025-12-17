@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lê Đức Tài - Video Editor | Content Creator Mindset. Chuyên gia biên tập video với hơn 5 năm kinh nghiệm.">
+    <title>DuckTai Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">DUCKTAI</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link active">Giới thiệu</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link">Sản phẩm</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link">Về tôi</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link nav__link--cta">Liên hệ</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <div class="hero__gradient"></div>
+            <div class="hero__particles" id="particles"></div>
+        </div>
+        <div class="hero__content container">
+            <div class="hero__badge" data-aos="fade-down">
+                <span class="badge__icon">📍</span>
+                <span>Quảng Trị, Việt Nam (Available for Remote Work)</span>
+            </div>
+            <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+                <span class="title__line">XIN CHÀO! TÔI LÀ</span>
+                <span class="title__name">DuckTai</span>
+            </h1>
+            <p class="hero__description" data-aos="fade-up" data-aos-delay="200">
+                <strong>Video Editor | Content Creator </strong><br>
+                "Không chỉ chỉnh sửa video, tôi tạo ra cảm xúc và giữ chân người xem."
+            </p>
+            <div class="hero__buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="projects.html" class="btn btn--primary">
+                    <span class="btn__icon">▶</span>
+                    <span>XEM DỰ ÁN</span>
+                </a>
+                <a href="#contact" class="btn btn--outline">
+                    <span>Liên hệ ngay</span>
+                    <span class="btn__arrow">→</span>
+                </a>
+            </div>
+            <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat">
+                    <span class="stat__number" data-count="3">0</span>
+                    <span class="stat__label">Năm kinh nghiệm</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number" data-count="100">0</span>
+                    <span class="stat__label">Dự án hoàn thành</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number" data-count="10">0</span>
+                    <span class="stat__label">Triệu lượt xem</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Scroll</span>
+            <div class="scroll__line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee">
+        <div class="marquee__track">
+            <div class="marquee__content">
+                <span>VIDEO EDITING</span>
+                <span class="marquee__dot">◆</span>
+                <span>CONTENT MINDSET</span>
+                <span class="marquee__dot">◆</span>
+                <span>GAMING</span>
+                <span class="marquee__dot">◆</span>
+                <span>EDUCATION</span>
+                <span class="marquee__dot">◆</span>
+                <span>SHORT-FORM</span>
+                <span class="marquee__dot">◆</span>
+                <span>STORYTELLING</span>
+                <span class="marquee__dot">◆</span>
+                <span>VIDEO EDITING</span>
+                <span class="marquee__dot">◆</span>
+                <span>CONTENT MINDSET</span>
+                <span class="marquee__dot">◆</span>
+                <span>GAMING</span>
+                <span class="marquee__dot">◆</span>
+                <span>EDUCATION</span>
+                <span class="marquee__dot">◆</span>
+                <span>SHORT-FORM</span>
+                <span class="marquee__dot">◆</span>
+                <span>STORYTELLING</span>
+                <span class="marquee__dot">◆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">✦ Before & After</span>
+                <h2 class="section__title">
+                    <span>VIDEO</span>
+                    <span class="title__highlight">SHOWCASE</span>
+                </h2>
+                <p class="section__subtitle">
+                    Xem sự khác biệt trước và sau khi qua tay chỉnh sửa của tôi
+                </p>
+            </div>
+
+            <div class="showcase__grid">
+                <!-- Video 1: Before After 2 - VINCOM PLAZA -->
+                <div class="showcase__item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="showcase__video-wrapper">
+                        <iframe class="showcase__iframe"
+                            src="https://www.youtube.com/embed/14TtRZnunL4?enablejsapi=1&mute=1&loop=1&playlist=14TtRZnunL4"
+                            title="VINCOM PLAZA ĐÔNG HÀ" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Video 2: Before After 3 -->
+                <div class="showcase__item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="showcase__video-wrapper">
+                        <iframe class="showcase__iframe"
+                            src="https://www.youtube.com/embed/V2B_ZXO06WA?enablejsapi=1&mute=1&loop=1&playlist=V2B_ZXO06WA"
+                            title="before after 3" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Video 3: Before After 4 - Google Drive -->
+                <div class="showcase__item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="showcase__video-wrapper">
+                        <iframe class="showcase__iframe"
+                            src="https://drive.google.com/file/d/1xFyvKbySuyxHsOVlmEIAN7c4c6-PEMJ0/preview"
+                            frameborder="0" allow="autoplay" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <div class="skills__wrapper">
+                <div class="skills__content" data-aos="fade-right">
+                    <span class="section__badge">✦ Kỹ năng & Công cụ</span>
+                    <h2 class="section__title">
+                        <span>CÔNG CỤ</span>
+                        <span class="title__highlight">THÀNH THẠO</span>
+                    </h2>
+                    <p class="skills__description">
+                        Tôi thành thạo các phần mềm chuyên nghiệp trong ngành để mang đến
+                        những sản phẩm chất lượng cao nhất cho khách hàng.
+                    </p>
+                    <a href="about.html" class="btn btn--outline" style="margin-top: 24px;">
+                        <span>Tìm hiểu thêm về tôi</span>
+                        <span class="btn__arrow">→</span>
+                    </a>
+                </div>
+                <div class="skills__grid" data-aos="fade-left">
+                    <div class="skill__item">
+                        <div class="skill__icon">Pr</div>
+                        <span class="skill__name">Premiere Pro</span>
+                    </div>
+                    <div class="skill__item">
+                        <div class="skill__icon">Cc</div>
+                        <span class="skill__name">CapCut PC</span>
+                    </div>
+                    <div class="skill__item">
+                        <div class="skill__icon">Ae</div>
+                        <span class="skill__name">After Effects</span>
+                    </div>
+                    <div class="skill__item">
+                        <div class="skill__icon">Ps</div>
+                        <span class="skill__name">Photoshop</span>
+                    </div>
+                    <div class="skill__item">
+                        <div class="skill__icon">Ai</div>
+                        <span class="skill__name">Illustrator</span>
+                    </div>
+                    <div class="skill__item">
+                        <div class="skill__icon">Au</div>
+                        <span class="skill__name">Audition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2 class="cta__title">
+                    Bạn cần video<br>
+                    <span class="title__highlight">bùng nổ cảm xúc?</span>
+                </h2>
+                <p class="cta__description">
+                    Hãy để tôi giúp bạn kể câu chuyện của mình qua những thước phim ấn tượng.
+                </p>
+                <a href="#contact" class="btn btn--primary btn--large">
+                    <span>Bắt đầu dự án</span>
+                    <span class="btn__arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__info" data-aos="fade-right">
+                    <span class="section__badge">✦ Liên hệ</span>
+                    <h2 class="section__title">
+                        <span>KẾT NỐI</span>
+                        <span class="title__highlight">VỚI TÔI</span>
+                    </h2>
+                    <p class="contact__description">
+                        Sẵn sàng hợp tác cho các dự án Freelance và Remote.
+                    </p>
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <div class="contact__icon">📍</div>
+                            <div class="contact__text">
+                                <span class="contact__label">Địa chỉ</span>
+                                <span class="contact__value">Quảng Trị, Việt Nam</span>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">✉️</div>
+                            <div class="contact__text">
+                                <span class="contact__label">Email</span>
+                                <a href="mailto:leductai294@gmail.com" class="contact__value">leductai294@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__icon">📱</div>
+                            <div class="contact__text">
+                                <span class="contact__label">Zalo/SĐT</span>
+                                <a href="tel:0376347357" class="contact__value">0376347357</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__social">
+                        <a href="https://www.facebook.com/profile.php?id=100070516498557" class="social__link"
+                            aria-label="Facebook" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@DuckTai74" class="social__link" aria-label="YouTube"
+                            target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@ducktai74" class="social__link" aria-label="TikTok"
+                            target="_blank">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__form-wrapper" data-aos="fade-left">
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Họ và tên</label>
+                            <input type="text" id="name" name="name" class="form__input"
+                                placeholder="Nhập họ và tên của bạn" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input"
+                                placeholder="Nhập email của bạn" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="service" class="form__label">Dịch vụ quan tâm</label>
+                            <select id="service" name="service" class="form__input form__select">
+                                <option value="">Chọn dịch vụ</option>
+                                <option value="editing">Video Editing</option>
+                                <option value="motion">Motion Graphics</option>
+                                <option value="color">Color Grading</option>
+                                <option value="vfx">VFX</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Tin nhắn</label>
+                            <textarea id="message" name="message" class="form__input form__textarea"
+                                placeholder="Mô tả dự án của bạn..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span>Gửi tin nhắn</span>
+                            <span class="btn__arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="logo-text">LÊ ĐỨC TÀI</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer__tagline">
+                        Video Editor | Content Creator Mindset
+                    </p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__title">Quick Links</h4>
+                        <ul class="footer__list">
+                            <li><a href="index.html">Giới thiệu</a></li>
+                            <li><a href="projects.html">Sản phẩm</a></li>
+                            <li><a href="about.html">Về tôi</a></li>
+                            <li><a href="#contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__title">Dịch vụ</h4>
+                        <ul class="footer__list">
+                            <li><a href="projects.html">Video Editing</a></li>
+                            <li><a href="projects.html">Short-form</a></li>
+                            <li><a href="projects.html">Vlog & Travel</a></li>
+                            <li><a href="projects.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h4 class="footer__title">Kết nối</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://www.youtube.com/@DuckTai74" target="_blank">YouTube</a>
+                            </li>
+                            <li><a href="https://www.tiktok.com/@ducktai74" target="_blank">TikTok</a>
+                            </li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100070516498557"
+                                    target="_blank">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 DuckTai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
