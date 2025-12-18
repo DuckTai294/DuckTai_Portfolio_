@@ -2629,7 +2629,8 @@ a.contact__value:hover {
 .showcase__video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 177.78%; /* 9:16 Aspect Ratio */
+    padding-top: 177.78%;
+    /* 9:16 Aspect Ratio */
     overflow: hidden;
     border-radius: var(--radius-lg);
     background: #1a1a2e;
@@ -2679,6 +2680,11 @@ a.contact__value:hover {
     color: white;
 }
 
+.showcase__item.playing .showcase__play-icon {
+    transform: scale(0);
+    opacity: 0;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .showcase__grid {
@@ -2694,10 +2700,9 @@ a.contact__value:hover {
     .showcase__grid {
         grid-template-columns: 1fr;
     }
-    
+
     .showcase__item {
-        max-width: 280px; /* Giữ kích thước giống mobile view TikTok */
+        max-width: 280px;
         margin: 0 auto;
     }
 }
-
