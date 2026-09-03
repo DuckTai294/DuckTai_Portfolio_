@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="dmca-site-verification" content="czBMS0I2VzJScVhMNURXdG5TaE9BdVlHb2ZTT3h1MlZOcUtlcHpSdnI4RT01">
+  <meta name="description" content="Danh mục các dự án video 16:9 và 9:16 do Zunix thực hiện.">
+  <title>Catalogue Dự Án // ZUNIX</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- STUDIO STATUS STRIP -->
+  <aside class="studio-status-strip">
+    <div class="status-indicator">
+      <span class="pulse-led"></span>
+      <span>FILM CATALOGUE // 10 SELECTED PRODUCTIONS</span>
+    </div>
+    <div class="studio-timecode">
+      <span>TIMECODE</span>
+      <b id="live-timecode">00:00:00:00</b>
+      <span style="margin-left: 12px; color: var(--navy)">DCI 4K & VERTICAL</span>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" aria-label="Điều hướng chính">
+    <a class="brand" href="index.html">ZUNIX <span>// 02</span></a>
+    <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html"><b>01</b> Trang chủ</a>
+      <a aria-current="page" href="works.html"><b>02</b> Dự án</a>
+      <a href="about.html"><b>03</b> Giới thiệu</a>
+      <a class="nav-cta" href="contact.html"><b>04</b> Bắt đầu Project ↗</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- WORK COVER HEADER -->
+    <header class="section-head reveal" style="margin-top: 3rem;">
+      <div>
+        <span class="eyebrow">PORTFOLIO ARCHIVE</span>
+        <h1 class="section-title">
+          Dự án được dựng để<br>
+          <span style="color:var(--mint)">giữ trọn chú ý.</span>
+        </h1>
+        <p class="muted" style="max-width: 600px; margin-top: 1rem;">
+          Bộ sưu tập 10 dự án tiêu biểu trải dài từ video YouTube ngang 16:9 giàu nhịp điệu đến nội dung ngắn 9:16 tối ưu cho tốc độ lướt di động.
+        </p>
+      </div>
+
+      <!-- FILTER DECK TABS -->
+      <div class="filter-deck-bar">
+        <button class="filter-tab active" type="button" data-filter="all">ALL FILMS [10]</button>
+        <button class="filter-tab" type="button" data-filter="long">16:9 LONG-FORM [07]</button>
+        <button class="filter-tab" type="button" data-filter="short">9:16 SHORTS [03]</button>
+      </div>
+    </header>
+
+    <!-- FILM CATALOGUE GRID -->
+    <div id="catalogue-container" class="catalogue-grid reveal"></div>
+
+    <!-- CTA SLATE BANNER -->
+    <section class="section reveal">
+      <div class="slate-banner">
+        <div>
+          <span class="eyebrow">PROJECT INTAKE</span>
+          <h2>Bạn có dự án mới?<br>Hãy để Zunix đồng hành <span style="color:var(--mint)">ngay hôm nay.</span></h2>
+        </div>
+        <a class="button primary" href="contact.html">GỬI BRIEF VIDEO ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- VIDEO MODAL -->
+  <dialog id="video-modal" class="video-modal" aria-labelledby="video-modal-title">
+    <header>
+      <span id="video-modal-title">STUDIO PLAYBACK // REEL</span>
+      <button type="button" data-close-video aria-label="Đóng video">CLOSE [X]</button>
+    </header>
+    <div class="video-stage">
+      <iframe data-video-frame title="Video project của Zunix" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="container footer">
+    <span>© <span data-year></span> ZUNIX STUDIO — ALL RIGHTS RESERVED</span>
+    <a href="//www.dmca.com/Protection/Status.aspx?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" title="DMCA.com Protection Status" class="dmca-badge">
+      <img src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" alt="DMCA.com Protection Status">
+    </a>
+    <span>LOCATION // VIETNAM · GMT+7</span>
+  </footer>
+
+  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+  <script src="site.js"></script>
+  <script>
+    const films = [
+      { name: 'Gaming Edit', id: 'OoC2H5Q2zI0', cat: 'Gaming', type: 'long', ratio: '16:9' },
+      { name: 'Giới Thiệu Sản Phẩm', id: 'tctA52FN5ks', cat: 'Quảng cáo', type: 'long', ratio: '16:9' },
+      { name: 'Hướng Dẫn Sử Dụng', id: 'aDZMoTmb7uc', cat: 'Hướng dẫn', type: 'long', ratio: '16:9' },
+      { name: 'Bài Tập Lớn', id: '51kFfLZ4eag', cat: 'Project', type: 'long', ratio: '16:9' },
+      { name: 'Vlog Visual Diary', id: 'XbWvekYLxrg', cat: 'Lifestyle', type: 'long', ratio: '16:9' },
+      { name: 'Montage Edit', id: 'bRFrkHieadI', cat: 'Montage', type: 'long', ratio: '16:9' },
+      { name: 'Gaming Video', id: 'C1tjimH8WOs', cat: 'Gaming', type: 'long', ratio: '16:9' },
+      { name: 'Quảng Cáo Khóa Học', id: 'vlWFAiPr9wY', cat: 'Quảng cáo', type: 'short', ratio: '9:16' },
+      { name: 'Review Căn Hộ', id: 'IfHUFlo5u4E', cat: 'Review', type: 'short', ratio: '9:16' },
+      { name: 'TikTok Content', id: '6JEZHiyQwUk', cat: 'Social', type: 'short', ratio: '9:16' }
+    ];
+
+    const container = document.getElementById('catalogue-container');
+    const modal = document.getElementById('video-modal');
+    const frame = modal.querySelector('[data-video-frame]');
+    const titleEl = document.getElementById('video-modal-title');
+    const closeBtn = modal.querySelector('[data-close-video]');
+
+    function renderFilms(filter = 'all') {
+      container.innerHTML = '';
+      const list = filter === 'all' ? films : films.filter(f => f.type === filter);
+      list.forEach((film, index) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'reel-film-card';
+        card.innerHTML = `
+          <div class="reel-thumb-box" style="${film.type === 'short' ? 'aspect-ratio: 9/16; max-height: 480px;' : ''}">
+            <img loading="lazy" src="https://i.ytimg.com/vi/${film.id}/hqdefault.jpg" alt="${film.name}">
+            <span class="film-format-badge">${film.ratio} · ${film.cat.toUpperCase()}</span>
+            <div class="film-play-overlay">
+              <span class="play-ring"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
+            </div>
+          </div>
+          <div class="reel-film-meta">
+            <div>
+              <h3>${film.name}</h3>
+              <span>FILM // 0${index + 1} · ${film.cat}</span>
+            </div>
+            <span class="reel-film-arrow">PLAY ↗</span>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          titleEl.textContent = 'PLAYING // ' + film.name.toUpperCase();
+          frame.src = `https://www.youtube.com/embed/${film.id}?autoplay=1&rel=0`;
+          modal.showModal();
+          closeBtn.focus();
+        });
+        container.appendChild(card);
+      });
+    }
+
+    renderFilms('all');
+
+    // Filter tab buttons
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderFilms(tab.dataset.filter);
+      });
+    });
+  </script>
+</body>
+</html>
