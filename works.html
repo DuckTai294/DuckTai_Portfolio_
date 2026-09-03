@@ -1,178 +1,267 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="dmca-site-verification" content="czBMS0I2VzJScVhMNURXdG5TaE9BdVlHb2ZTT3h1MlZOcUtlcHpSdnI4RT01"><meta name="description" content="Tất cả các dự án video tiêu biểu của Lê Đức Tài (DuckTai) - Video Editor & Content Creator Mindset."><title>Dự án — DuckTai Portfolio</title><link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="redesign.css"></head><body>
-<nav class="site-nav" aria-label="Điều hướng chính"><a class="brand" href="index.html">DUCKTAI<b>.</b></a><button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="nav-links"><a href="index.html">Trang chủ</a><a aria-current="page" href="works.html">Dự án</a><a href="about.html">Giới thiệu</a><a class="nav-cta" href="contact.html">Liên hệ</a></div></nav>
-<main><header class="container page-hero reveal"><p class="eyebrow">Project chọn lọc · 51 project</p><h1 class="work-poster"><span class="work-poster-lead"><span class="lead-hand">Project</span><span class="lead-sans">được dựng để</span></span><strong class="retention-title"><span class="retention-outline">GIỮ</span><span class="retention-solid">CHÂN</span></strong><span class="work-poster-tail">người xem.</span></h1><p class="muted">Bứt phá giới hạn sáng tạo với bộ sưu tập các dự án đa lĩnh vực – từ Bất động sản, Khóa học, Gaming đến Podcast, Sự kiện, Vlog và Quảng cáo. Giữ chân khán giả qua từng phút giây được tạo nên bởi sự trau chốt của tôi.</p></header>
-<section class="container work-chapter longform-showreel"><div class="work-chapter-head reveal"><div><p class="eyebrow">Phần 01 · Long-form</p><h2>Video Dài</h2></div><span id="longform-count">28 PROJECT · 16:9</span></div>
-<div class="filter-tabs" id="longform-filters"><button class="filter-tab active" data-filter="all">Tất cả</button><button class="filter-tab" data-filter="Bất động sản">Bất động sản</button><button class="filter-tab" data-filter="Khóa học">Khóa học</button><button class="filter-tab" data-filter="Gaming">Gaming</button><button class="filter-tab" data-filter="Podcast">Podcast</button><button class="filter-tab" data-filter="Sự kiện">Sự kiện</button><button class="filter-tab" data-filter="Review">Review/Vlog</button><button class="filter-tab" data-filter="Giáo dục">Giáo dục</button></div>
-<div class="showreel-feature"><div class="showreel-marker"><span>Featured cut</span><b>01</b></div><div id="featured-work" class="featured-work"></div></div><div class="showreel-rail-head"><span>More cuts</span><span id="more-cuts-count">27 CUTS · 16:9</span></div><div id="landscape-work" class="landscape-work showreel-rail"></div></section>
-<section class="short-chapter"><div class="container"><div class="work-chapter-head reveal"><div><p class="eyebrow">Phần 02 · Short-form & Gaming Shorts</p><h2>Shorts / Reels</h2></div><span id="shortform-count">23 PROJECT · 9:16</span></div>
-<div class="filter-tabs" id="shortform-filters"><button class="filter-tab active" data-filter="all">Tất cả</button><button class="filter-tab" data-filter="Gaming Shorts">Gaming Shorts</button><button class="filter-tab" data-filter="Giáo dục">Giáo dục</button><button class="filter-tab" data-filter="Sự kiện">Sự kiện</button><button class="filter-tab" data-filter="Quảng cáo">Quảng cáo</button></div>
-<div id="portrait-work" class="portrait-work"></div></div></section>
-<section class="container section reveal"><div class="cta"><div><p class="eyebrow">Project tiếp theo · Có thể là của bạn</p><h2>Cùng tạo một video<br><span style="color:var(--cyan)">đáng để xem lại.</span></h2></div><a class="button primary" href="contact.html">Trao đổi project <span aria-hidden="true">↗</span></a></div></section></main>
-<dialog id="player" aria-labelledby="player-title"><header><span id="player-title">Xem project</span><button id="close-player" type="button" aria-label="Đóng video">Đóng</button></header><iframe id="frame" title="Video project của DuckTai" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></dialog>
-<footer class="container footer"><span>© <span data-year></span> DuckTai - Creative Video Editor</span><a href="//www.dmca.com/Protection/Status.aspx?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" title="DMCA.com Protection Status" class="dmca-badge"><img src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" alt="DMCA.com Protection Status"></a><span>TP. Hồ Chí Minh, Vietnam · GMT+7</span></footer><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script><script src="site.js"></script><script>
-const longForm = [
-  ['Blanca City by Sungroup - Vũng Tàu', '3Dj5D4r3oys', 'Bất động sản'],
-  ['TO BECOME THE PERSON YOU WANT...', 'egJZQNY6ih4', 'Podcast'],
-  ['1 THIEF, 1 STUPID...', 'WI7IM9v5_Us', 'Gaming'],
-  ['Mình Thấy Có Gì Đó Mặn Mặn', 'UTr0hje3nVs', 'Gaming'],
-  ['Khi Bọn Tôi Bị Xích Cùng Nhau', 'eQlimopzHuI', 'Gaming'],
-  ['Prison Break With A Spoon', 'SZZNwGABdMo', 'Gaming'],
-  ['IS THIS HUMAN OR DEMON!?', 'fO2q-X9e-8A', 'Gaming'],
-  ['Thuê Gái Rank Liên Quân...', '6Wc6ItH4i78', 'Gaming'],
-  ['Tôi tìm thấy chuột HAMSTER trong Minecraft !!', '87nOHFuZM9U', 'Gaming'],
-  ['Đứa nào vừa ** trong hồ bơi !?', '5BHW05px8UM', 'Gaming'],
-  ['lần đầu ngủ cùng nhau của bọn mình...', 'PvZd15_FqxE', 'Gaming'],
-  ['Game này làm tui rơi nước mắt...', 'DZHfAqcMPfk', 'Gaming'],
-  ['Các thầy trừ tà tài ba tô cơm', 'dZSNaRgHubA', 'Gaming'],
-  ['Đừng để bị game này đánh lừa', '81upiCtob6E', 'Gaming'],
-  ['Khóa học Chủ Quán Xây Kênh', 'ZvFef7cFwyM', 'Khóa học'],
-  ['Cách Quay Video - Khoá Học Học Chủ Quán', 'vLzuJgmyqs0', 'Khóa học'],
-  ['Cách Tìm Kiếm Ý Tưởng', 'BNDqNsMaUKY', 'Khóa học'],
-  ['Mẹo Quay Video', 'qkbitmIkEMk', 'Khóa học'],
-  ['DIPLOMATS - Giải Nhất CLB Tiếng Anh', 'Tmywx-pe028', 'Giáo dục'],
-  ['RECAP ĐÁM CƯỚI - Cầu Hôn Tại CGV', 'b5Iyd58AKJg', 'Sự kiện'],
-  ['Podcast - DuckTai Editor', 'RFFZ5yHiuu0', 'Podcast'],
-  ['Hồi Ký - PODCAST', 'LNkkPDIzc6U', 'Podcast'],
-  ['Linh Miêu Ba Sắc - PODCAST', 'xdnUnKyfU-w', 'Podcast'],
-  ['Buffet Gành Hào Vũng Tàu', 'R4Yr-ZuHwEo', 'Review'],
-  ['Vlog 3: Cùng Taikonn khám phá Thượng Hải và DisneyLand', 'XbWvekYLxrg', 'Review'],
-  ['Dấu Hiệu Để Đàm Phán Với Nhà Thầu', 'l2lDuECQHvY', 'Bất động sản'],
-  ['Phân Tích Lô Đất', 'aEo6vyDa4bI', 'Bất động sản'],
-  ['Cẩn Thận Khi Chọn Nhà Thầu', '3Qd0XQE4E5E', 'Bất động sản']
-];
+<!doctype html>
+<html lang="vi">
 
-const shortForm = [
-  ['Video chạy ADS', 'VjpeHQc0_Rg', 'Quảng cáo'],
-  ['Bị gạ bán quần và chia sẻ công thức ngâm rượu tặng riêng cho kênh chat', 'Axw2EwOVZow', 'Gaming Shorts'],
-  ['Chơi game PUBG mà toàn đi loot đồ kệ đồng đội', 'pqPmJJlCi7U', 'Gaming Shorts'],
-  ['Ai bảo tao già nữa thì vô đây TAO XẺO HẾT !!!', 'OJfxOOFjogY', 'Gaming Shorts'],
-  ['Khi đồng đội nằm xuống sẽ kích hoạt " Kim bài miễn tử " Hanakoishiiiii', 'oWzVSOm-iGg', 'Gaming Shorts'],
-  ['Bài tập về nhà hôm nay lạ quá', 'P0QTO9w2cIw', 'Gaming Shorts'],
-  ['Mở hòm PUBG săn nhân vật và skin vũ khí mới', 'ce-DFNxUqbY', 'Gaming Shorts'],
-  ['Biết tí ngoại ngữ chơi game nó sang hẳn', 'aDxnCk16f3s', 'Gaming Shorts'],
-  ['MetalD cái tôi quá lớn #pubg #taikonn', 'nWWvKRaT7Ro', 'Gaming Shorts'],
-  ['Cứ để anh phải nóng #pubg #taikonn', 'hVUoJBcAGeo', 'Gaming Shorts'],
-  ['Kong đã biết 1 bí mật của Kronus', 'I1GJIRqToi4', 'Gaming Shorts'],
-  ['phản ứng của Kronus khi Kong thả thính lần 2', 'hrI70L2B4Ps', 'Gaming Shorts'],
-  ['Kong làm gì Kronus thế này', '0x-m4JcwrgQ', 'Gaming Shorts'],
-  ['yeee được gọi là chồng rồi =)))', 'zwyLJWbeFgY', 'Gaming Shorts'],
-  ['Anh Kong ơi... em sợ quá à', 'AR210xY0kzo', 'Gaming Shorts'],
-  ['Trò hơn Thầy là.... #Taikonn #PUBG', '7568773400424975632', 'Gaming Shorts', 'tiktok', 'tiktok-frame-2.jpg'],
-  ['Kiến thức tài chính - 401k', '4MsK-kcAfUk', 'Giáo dục'],
-  ['COOLMATE - StoryTelling', 'Q2xcqij-RTs', 'Sự kiện'],
-  ['SỰ KIỆN CHẠY BỘ', 'YFMh3D4fcXg', 'Sự kiện'],
-  ['SỰ KIỆN HYROX - Kevin Bùi', 'wNBnu3s9Idc', 'Sự kiện'],
-  ['Cuộc chiến của những người khoẻ nhất và bền nhất', '7581849884299463943', 'Sự kiện', 'tiktok', 'tiktok-frame-1.jpg']
-];
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="dmca-site-verification" content="czBMS0I2VzJScVhMNURXdG5TaE9BdVlHb2ZTT3h1MlZOcUtlcHpSdnI4RT01">
+  <meta name="description"
+    content="Tất cả các dự án video tiêu biểu của Lê Đức Tài (DuckTai) - Video Editor & Content Creator Mindset.">
+  <title>Dự án — DuckTai Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="redesign.css">
+</head>
 
-const player = document.getElementById('player'),
+<body>
+  <nav class="site-nav" aria-label="Điều hướng chính"><a class="brand" href="index.html">DUCKTAI<b>.</b></a><button
+      class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg></button>
+    <div class="nav-links"><a href="index.html">Trang chủ</a><a aria-current="page" href="works.html">Dự án</a><a
+        href="about.html">Giới thiệu</a><a class="nav-cta" href="contact.html">Liên hệ</a></div>
+  </nav>
+  <main>
+    <header class="container page-hero reveal">
+      <p class="eyebrow">Project chọn lọc · 51 project</p>
+      <h1 class="work-poster"><span class="work-poster-lead"><span class="lead-hand">Project</span><span
+            class="lead-sans">được dựng để</span></span><strong class="retention-title"><span
+            class="retention-outline">GIỮ</span><span class="retention-solid">CHÂN</span></strong><span
+          class="work-poster-tail">người xem.</span></h1>
+      <p class="muted">Bứt phá giới hạn sáng tạo với bộ sưu tập các dự án đa lĩnh vực – từ Bất động sản, Khóa học,
+        Gaming đến Podcast, Sự kiện, Vlog và Quảng cáo. Giữ chân khán giả qua từng phút giây được tạo nên bởi sự trau
+        chốt của tôi.</p>
+    </header>
+    <section class="container work-chapter longform-showreel">
+      <div class="work-chapter-head reveal">
+        <div>
+          <p class="eyebrow">Phần 01 · Long-form</p>
+          <h2>Video Dài</h2>
+        </div><span id="longform-count">28 PROJECT · 16:9</span>
+      </div>
+      <div class="filter-tabs" id="longform-filters"><button class="filter-tab active" data-filter="all">Tất
+          cả</button><button class="filter-tab" data-filter="Bất động sản">Bất động sản</button><button
+          class="filter-tab" data-filter="Khóa học">Khóa học</button><button class="filter-tab"
+          data-filter="Gaming">Gaming</button><button class="filter-tab" data-filter="Podcast">Podcast</button><button
+          class="filter-tab" data-filter="Sự kiện">Sự kiện</button><button class="filter-tab"
+          data-filter="Review">Review/Vlog</button><button class="filter-tab" data-filter="Giáo dục">Giáo dục</button>
+      </div>
+      <div class="showreel-feature">
+        <div class="showreel-marker"><span>Featured cut</span><b>01</b></div>
+        <div id="featured-work" class="featured-work"></div>
+      </div>
+      <div class="showreel-rail-head"><span>More cuts</span><span id="more-cuts-count">27 CUTS · 16:9</span></div>
+      <div id="landscape-work" class="landscape-work showreel-rail"></div>
+    </section>
+    <section class="short-chapter">
+      <div class="container">
+        <div class="work-chapter-head reveal">
+          <div>
+            <p class="eyebrow">Phần 02 · Short-form & Gaming Shorts</p>
+            <h2>Shorts / Reels</h2>
+          </div><span id="shortform-count">23 PROJECT · 9:16</span>
+        </div>
+        <div class="filter-tabs" id="shortform-filters"><button class="filter-tab active" data-filter="all">Tất
+            cả</button><button class="filter-tab" data-filter="Gaming Shorts">Gaming Shorts</button><button
+            class="filter-tab" data-filter="Giáo dục">Giáo dục</button><button class="filter-tab"
+            data-filter="Sự kiện">Sự kiện</button><button class="filter-tab" data-filter="Quảng cáo">Quảng cáo</button>
+        </div>
+        <div id="portrait-work" class="portrait-work"></div>
+      </div>
+    </section>
+    <section class="container section reveal">
+      <div class="cta">
+        <div>
+          <p class="eyebrow">Project tiếp theo · Có thể là của bạn</p>
+          <h2>Cùng tạo một video<br><span style="color:var(--cyan)">đáng để xem lại.</span></h2>
+        </div><a class="button primary" href="contact.html">Trao đổi project <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <dialog id="player" aria-labelledby="player-title">
+    <header><span id="player-title">Xem project</span><button id="close-player" type="button"
+        aria-label="Đóng video">Đóng</button></header><iframe id="frame" title="Video project của DuckTai"
+      allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  </dialog>
+  <footer class="container footer"><span>© <span data-year></span> DuckTai - Creative Video Editor</span><a
+      href="//www.dmca.com/Protection/Status.aspx?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f"
+      title="DMCA.com Protection Status" class="dmca-badge"><img
+        src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f"
+        alt="DMCA.com Protection Status"></a><span>TP. Hồ Chí Minh, Vietnam · GMT+7</span></footer>
+  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+  <script src="site.js"></script>
+  <script>
+    const longForm = [
+      ['Blanca City by Sungroup - Vũng Tàu', '3Dj5D4r3oys', 'Bất động sản'],
+      ['TO BECOME THE PERSON YOU WANT...', 'egJZQNY6ih4', 'Podcast'],
+      ['1 THIEF, 1 STUPID...', 'WI7IM9v5_Us', 'Gaming'],
+      ['Mình Thấy Có Gì Đó Mặn Mặn', 'UTr0hje3nVs', 'Gaming'],
+      ['Khi Bọn Tôi Bị Xích Cùng Nhau', 'eQlimopzHuI', 'Gaming'],
+      ['Prison Break With A Spoon', 'SZZNwGABdMo', 'Gaming'],
+      ['IS THIS HUMAN OR DEMON!?', 'fO2q-X9e-8A', 'Gaming'],
+      ['Thuê Gái Rank Liên Quân...', '6Wc6ItH4i78', 'Gaming'],
+      ['Tôi tìm thấy chuột HAMSTER trong Minecraft !!', '87nOHFuZM9U', 'Gaming'],
+      ['Đứa nào vừa ** trong hồ bơi !?', '5BHW05px8UM', 'Gaming'],
+      ['lần đầu ngủ cùng nhau của bọn mình...', 'PvZd15_FqxE', 'Gaming'],
+      ['Game này làm tui rơi nước mắt...', 'DZHfAqcMPfk', 'Gaming'],
+      ['Các thầy trừ tà tài ba tô cơm', 'dZSNaRgHubA', 'Gaming'],
+      ['Đừng để bị game này đánh lừa', '81upiCtob6E', 'Gaming'],
+      ['Khóa học Chủ Quán Xây Kênh', 'ZvFef7cFwyM', 'Khóa học'],
+      ['Cách Quay Video - Khoá Học Học Chủ Quán', 'vLzuJgmyqs0', 'Khóa học'],
+      ['Cách Tìm Kiếm Ý Tưởng', 'BNDqNsMaUKY', 'Khóa học'],
+      ['Mẹo Quay Video', 'qkbitmIkEMk', 'Khóa học'],
+      ['DIPLOMATS - Giải Nhất CLB Tiếng Anh', 'Tmywx-pe028', 'Giáo dục'],
+      ['RECAP ĐÁM CƯỚI - Cầu Hôn Tại CGV', 'b5Iyd58AKJg', 'Sự kiện'],
+      ['Podcast - DuckTai Editor', 'RFFZ5yHiuu0', 'Podcast'],
+      ['Hồi Ký - PODCAST', 'LNkkPDIzc6U', 'Podcast'],
+      ['Linh Miêu Ba Sắc - PODCAST', 'xdnUnKyfU-w', 'Podcast'],
+      ['Buffet Gành Hào Vũng Tàu', 'R4Yr-ZuHwEo', 'Review'],
+      ['Vlog 3: Cùng Taikonn khám phá Thượng Hải và DisneyLand', 'XbWvekYLxrg', 'Review'],
+      ['Dấu Hiệu Để Đàm Phán Với Nhà Thầu', 'l2lDuECQHvY', 'Bất động sản'],
+      ['Phân Tích Lô Đất', 'aEo6vyDa4bI', 'Bất động sản'],
+      ['Cẩn Thận Khi Chọn Nhà Thầu', '3Qd0XQE4E5E', 'Bất động sản']
+    ];
+
+    const shortForm = [
+      // 1. Sự kiện & Storytelling (Ưu tiên hiển thị đầu)
+      ['COOLMATE - StoryTelling', 'Q2xcqij-RTs', 'Sự kiện'],
+      ['SỰ KIỆN HYROX - Kevin Bùi', 'wNBnu3s9Idc', 'Sự kiện'],
+      ['Cuộc chiến của những người khoẻ nhất và bền nhất', '7581849884299463943', 'Sự kiện', 'tiktok', 'tiktok-frame-1.jpg'],
+      ['SỰ KIỆN CHẠY BỘ', 'YFMh3D4fcXg', 'Sự kiện'],
+      ['Video chạy ADS', 'VjpeHQc0_Rg', 'Quảng cáo'],
+
+      // 2. Giáo dục
+      ['Kiến thức tài chính - 401k', '4MsK-kcAfUk', 'Giáo dục'],
+
+      // 3. Gaming Shorts (Teacute LIVE -> Taikonn -> Kong 2202)
+      ['Bị gạ bán quần và chia sẻ công thức ngâm rượu tặng riêng cho kênh chat', 'Axw2EwOVZow', 'Gaming Shorts'],
+      ['Chơi game PUBG mà toàn đi loot đồ kệ đồng đội', 'pqPmJJlCi7U', 'Gaming Shorts'],
+      ['Ai bảo tao già nữa thì vô đây TAO XẺO HẾT !!!', 'OJfxOOFjogY', 'Gaming Shorts'],
+      ['Khi đồng đội nằm xuống sẽ kích hoạt " Kim bài miễn tử " Hanakoishiiiii', 'oWzVSOm-iGg', 'Gaming Shorts'],
+      ['Bài tập về nhà hôm nay lạ quá', 'P0QTO9w2cIw', 'Gaming Shorts'],
+      ['Mở hòm PUBG săn nhân vật và skin vũ khí mới', 'ce-DFNxUqbY', 'Gaming Shorts'],
+      ['Biết tí ngoại ngữ chơi game nó sang hẳn', 'aDxnCk16f3s', 'Gaming Shorts'],
+      ['MetalD cái tôi quá lớn #pubg #taikonn', 'nWWvKRaT7Ro', 'Gaming Shorts'],
+      ['Cứ để anh phải nóng #pubg #taikonn', 'hVUoJBcAGeo', 'Gaming Shorts'],
+      ['Trò hơn Thầy là.... #Taikonn #PUBG', '7568773400424975632', 'Gaming Shorts', 'tiktok', 'tiktok-frame-2.jpg'],
+      ['Kong đã biết 1 bí mật của Kronus', 'I1GJIRqToi4', 'Gaming Shorts'],
+      ['phản ứng của Kronus khi Kong thả thính lần 2', 'hrI70L2B4Ps', 'Gaming Shorts'],
+      ['Kong làm gì Kronus thế này', '0x-m4JcwrgQ', 'Gaming Shorts'],
+      ['yeee được gọi là chồng rồi =)))', 'zwyLJWbeFgY', 'Gaming Shorts'],
+      ['Anh Kong ơi... em sợ quá à', 'AR210xY0kzo', 'Gaming Shorts']
+    ];
+
+    const player = document.getElementById('player'),
       frame = document.getElementById('frame'),
       playerTitle = document.getElementById('player-title'),
       closeButton = document.getElementById('close-player');
-let lastCard;
+    let lastCard;
 
-function openVideo(card, name, id, format = 'landscape', platform = 'youtube') {
-  lastCard = card;
-  playerTitle.textContent = name;
-  
-  if (platform === 'tiktok') {
-    player.classList.add('is-portrait');
-    const targetUrl = 'https://www.tiktok.com/video/' + id;
-    frame.removeAttribute('src');
-    frame.srcdoc = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{margin:0;background:#0b0b11;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-align:center;padding:16px;box-sizing:border-box}.tiktok-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(45deg,#ff0050,#00f2fe);color:#fff;font-weight:700;text-decoration:none;border-radius:99px;font-size:0.95rem;box-shadow:0 10px 30px rgba(255,0,80,0.4);margin-top:14px;transition:transform .2s}.tiktok-btn:hover{transform:scale(1.04)}blockquote{margin:0 auto}</style></head><body><blockquote class="tiktok-embed" cite="' + targetUrl + '" data-video-id="' + id + '" style="max-width:325px;min-width:280px;"><section><a target="_blank" href="' + targetUrl + '">Xem video TikTok</a></section></blockquote><a class="tiktok-btn" href="' + targetUrl + '" target="_blank">Mở & Xem trên TikTok ↗</a><script async src="https://www.tiktok.com/embed.js"><\/script></body></html>';
-  } else {
-    player.classList.remove('is-portrait');
-    if (format === 'portrait') player.classList.add('is-portrait');
-    frame.removeAttribute('srcdoc');
-    frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
-  }
+    function openVideo(card, name, id, format = 'landscape', platform = 'youtube') {
+      lastCard = card;
+      playerTitle.textContent = name;
 
-  player.showModal();
-  closeButton.focus();
-}
+      if (platform === 'tiktok') {
+        player.classList.add('is-portrait');
+        const targetUrl = 'https://www.tiktok.com/video/' + id;
+        frame.removeAttribute('src');
+        frame.srcdoc = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{margin:0;background:#0b0b11;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-align:center;padding:16px;box-sizing:border-box}.tiktok-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(45deg,#ff0050,#00f2fe);color:#fff;font-weight:700;text-decoration:none;border-radius:99px;font-size:0.95rem;box-shadow:0 10px 30px rgba(255,0,80,0.4);margin-top:14px;transition:transform .2s}.tiktok-btn:hover{transform:scale(1.04)}blockquote{margin:0 auto}</style></head><body><blockquote class="tiktok-embed" cite="' + targetUrl + '" data-video-id="' + id + '" style="max-width:325px;min-width:280px;"><section><a target="_blank" href="' + targetUrl + '">Xem video TikTok</a></section></blockquote><a class="tiktok-btn" href="' + targetUrl + '" target="_blank">Mở & Xem trên TikTok ↗</a><script async src="https://www.tiktok.com/embed.js"><\/script></body></html>';
+      } else {
+        player.classList.remove('is-portrait');
+        if (format === 'portrait') player.classList.add('is-portrait');
+        frame.removeAttribute('srcdoc');
+        frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      }
 
-function card([name, id, category, platform = 'youtube', customThumb = ''], format, featured = false) {
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'gallery-card gallery-' + format + (featured ? ' featured-film' : '');
-  button.dataset.category = category;
-  
-  const isTikTok = platform === 'tiktok';
-  const badgeText = isTikTok ? 'TikTok · 9:16' : (format === 'portrait' ? '9:16' : '16:9');
-  const quality = featured ? 'maxresdefault' : (format === 'landscape' ? 'sddefault' : 'hqdefault');
-  
-  let thumbSrc = customThumb || ('https://img.youtube.com/vi/' + id + '/' + quality + '.jpg');
+      player.showModal();
+      closeButton.focus();
+    }
 
-  const mediaContent = `<img loading="lazy" src="${thumbSrc}" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'" alt="Thumbnail video ${name}">`;
+    function card([name, id, category, platform = 'youtube', customThumb = ''], format, featured = false) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'gallery-card gallery-' + format + (featured ? ' featured-film' : '');
+      button.dataset.category = category;
 
-  button.innerHTML = '<span class="gallery-media">' + mediaContent + '<i class="play-button" aria-hidden="true"></i><b>' + badgeText + '</b></span><span class="gallery-copy"><small>' + category + (isTikTok ? ' · TikTok' : '') + '</small><strong>' + name + '</strong><em>Xem video →</em></span>';
-  button.addEventListener('click', () => openVideo(button, name, id, format, platform));
-  return button;
-}
+      const isTikTok = platform === 'tiktok';
+      const badgeText = isTikTok ? 'TikTok · 9:16' : (format === 'portrait' ? '9:16' : '16:9');
+      const quality = featured ? 'maxresdefault' : (format === 'landscape' ? 'sddefault' : 'hqdefault');
 
-const featuredContainer = document.getElementById('featured-work');
-const landscapeContainer = document.getElementById('landscape-work');
-const portraitContainer = document.getElementById('portrait-work');
+      let thumbSrc = customThumb || ('https://img.youtube.com/vi/' + id + '/' + quality + '.jpg');
 
-function renderLongform(filter = 'all') {
-  featuredContainer.innerHTML = '';
-  landscapeContainer.innerHTML = '';
-  const filtered = filter === 'all' ? longForm : longForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
-  if (filtered.length > 0) {
-    featuredContainer.appendChild(card(filtered[0], 'landscape', true));
-    filtered.slice(1).forEach(item => landscapeContainer.appendChild(card(item, 'landscape')));
-    document.getElementById('more-cuts-count').textContent = (filtered.length - 1).toString().padStart(2, '0') + ' CUTS · 16:9';
-  } else {
-    landscapeContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
-    document.getElementById('more-cuts-count').textContent = '00 CUTS';
-  }
-}
+      const mediaContent = `<img loading="lazy" src="${thumbSrc}" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'" alt="Thumbnail video ${name}">`;
 
-function renderShortform(filter = 'all') {
-  portraitContainer.innerHTML = '';
-  const filtered = filter === 'all' ? shortForm : shortForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
-  if (filtered.length > 0) {
-    filtered.forEach(item => portraitContainer.appendChild(card(item, 'portrait')));
-    document.getElementById('shortform-count').textContent = filtered.length.toString().padStart(2, '0') + ' PROJECT · 9:16';
-  } else {
-    portraitContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
-    document.getElementById('shortform-count').textContent = '00 PROJECT · 9:16';
-  }
-}
+      button.innerHTML = '<span class="gallery-media">' + mediaContent + '<i class="play-button" aria-hidden="true"></i><b>' + badgeText + '</b></span><span class="gallery-copy"><small>' + category + (isTikTok ? ' · TikTok' : '') + '</small><strong>' + name + '</strong><em>Xem video →</em></span>';
+      button.addEventListener('click', () => openVideo(button, name, id, format, platform));
+      return button;
+    }
 
-renderLongform('all');
-renderShortform('all');
+    const featuredContainer = document.getElementById('featured-work');
+    const landscapeContainer = document.getElementById('landscape-work');
+    const portraitContainer = document.getElementById('portrait-work');
 
-// Tabs Filter Events
-document.querySelectorAll('#longform-filters .filter-tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#longform-filters .filter-tab').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderLongform(btn.dataset.filter);
-  });
-});
+    function renderLongform(filter = 'all') {
+      featuredContainer.innerHTML = '';
+      landscapeContainer.innerHTML = '';
+      const filtered = filter === 'all' ? longForm : longForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
+      if (filtered.length > 0) {
+        featuredContainer.appendChild(card(filtered[0], 'landscape', true));
+        filtered.slice(1).forEach(item => landscapeContainer.appendChild(card(item, 'landscape')));
+        document.getElementById('more-cuts-count').textContent = (filtered.length - 1).toString().padStart(2, '0') + ' CUTS · 16:9';
+      } else {
+        landscapeContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
+        document.getElementById('more-cuts-count').textContent = '00 CUTS';
+      }
+    }
 
-document.querySelectorAll('#shortform-filters .filter-tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#shortform-filters .filter-tab').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderShortform(btn.dataset.filter);
-  });
-});
+    function renderShortform(filter = 'all') {
+      portraitContainer.innerHTML = '';
+      const filtered = filter === 'all' ? shortForm : shortForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
+      if (filtered.length > 0) {
+        filtered.forEach(item => portraitContainer.appendChild(card(item, 'portrait')));
+        document.getElementById('shortform-count').textContent = filtered.length.toString().padStart(2, '0') + ' PROJECT · 9:16';
+      } else {
+        portraitContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
+        document.getElementById('shortform-count').textContent = '00 PROJECT · 9:16';
+      }
+    }
 
-function closePlayer() {
-  if (!player.open || player.classList.contains('is-closing')) return;
-  const delay = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : 240;
-  player.classList.add('is-closing');
-  setTimeout(() => {
-    frame.src = '';
-    player.close();
-    player.classList.remove('is-closing');
-    lastCard?.focus();
-  }, delay);
-}
+    renderLongform('all');
+    renderShortform('all');
 
-closeButton.addEventListener('click', closePlayer);
-player.addEventListener('cancel', event => { event.preventDefault(); closePlayer(); });
-player.addEventListener('click', event => { if (event.target === player) closePlayer(); });
-</script></body></html>
+    // Tabs Filter Events
+    document.querySelectorAll('#longform-filters .filter-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#longform-filters .filter-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderLongform(btn.dataset.filter);
+      });
+    });
+
+    document.querySelectorAll('#shortform-filters .filter-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#shortform-filters .filter-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderShortform(btn.dataset.filter);
+      });
+    });
+
+    function closePlayer() {
+      if (!player.open || player.classList.contains('is-closing')) return;
+      const delay = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : 240;
+      player.classList.add('is-closing');
+      setTimeout(() => {
+        frame.src = '';
+        player.close();
+        player.classList.remove('is-closing');
+        lastCard?.focus();
+      }, delay);
+    }
+
+    closeButton.addEventListener('click', closePlayer);
+    player.addEventListener('cancel', event => { event.preventDefault(); closePlayer(); });
+    player.addEventListener('click', event => { if (event.target === player) closePlayer(); });
+  </script>
+</body>
+
+</html>
