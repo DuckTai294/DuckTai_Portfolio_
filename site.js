@@ -57,7 +57,7 @@ if (siteNav) {
 const observer = new IntersectionObserver(entries => entries.forEach(entry => {
   if (entry.isIntersecting) {
     entry.target.classList.add('visible');
-    const childCards = entry.target.querySelectorAll('.service, .project-card, .toolkit-card, .fact-card, .why-card, .process-step, .shorts-showcase-card');
+    const childCards = entry.target.querySelectorAll('.service, .project-card, .toolkit-card, .fact-card, .why-card, .process-step, .shorts-showcase-card, .preset-feature-item, .checkout-step');
     childCards.forEach((card, index) => {
       card.style.setProperty('--stagger', index);
     });
