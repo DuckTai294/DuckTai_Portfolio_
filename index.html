@@ -1,229 +1,349 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="vi">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="dmca-site-verification" content="czBMS0I2VzJScVhMNURXdG5TaE9BdVlHb2ZTT3h1MlZOcUtlcHpSdnI4RT01">
-    <meta name="description"
-        content="Lê Đức Tài (DuckTai) - Creative Video Editor & Content Creator Mindset. Chuyên gia biên tập video giữ chân khán giả và tạo cảm xúc.">
-    <title>DuckTai — Creative Video Editor & Content Creator</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="redesign.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="dmca-site-verification" content="czBMS0I2VzJScVhMNURXdG5TaE9BdVlHb2ZTT3h1MlZOcUtlcHpSdnI4RT01">
+  <meta name="description" content="Zunix — Video editor chuyên nghiệp cho gaming, short-form, vlog và branded content.">
+  <title>ZUNIX // Video Editor Studio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <!-- STUDIO STATUS STRIP -->
+  <aside class="studio-status-strip">
+    <div class="status-indicator">
+      <span class="pulse-led"></span>
+      <span>ZUNIX STUDIO // AVAILABLE FOR COMMISSION</span>
+    </div>
+    <div class="studio-timecode">
+      <span>TIMECODE</span>
+      <b id="live-timecode">00:00:00:00</b>
+      <span style="margin-left: 12px; color: var(--navy)">4K DCI · 24FPS</span>
+    </div>
+  </aside>
 
-<body class="home">
-    <nav class="site-nav" aria-label="Điều hướng chính"><a class="brand" href="index.html">DUCKTAI<b>.</b></a><button
-            class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false"><svg viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 7h16M4 12h16M4 17h16" />
-            </svg></button>
-        <div class="nav-links"><a aria-current="page" href="index.html">Trang chủ</a><a href="works.html">Dự án</a><a
-                href="about.html">Giới thiệu</a><a href="preset.html">Preset</a><a class="nav-cta" href="contact.html">Liên hệ</a></div>
-    </nav>
-    <main>
-        <section class="container hero">
-            <div class="hero-copy reveal">
-                <p class="eyebrow">Video editor · TP. Hồ Chí Minh, Vietnam</p>
-                <h1 class="display">Creative <span class="script">video</span><br>editor.</h1>
-                <p class="muted">Tôi là Lê Đức Tài (DuckTai). "Không chỉ biên tập video, tôi tạo dựng nhịp điệu, cảm xúc
-                    và tối ưu tỷ lệ giữ chân người xem." Kết hợp tư duy nội dung với kỹ thuật hậu kỳ để mang lại sản
-                    phẩm tốt nhất.</p>
-                <div class="actions"><a class="button primary" href="works.html">Xem dự án <span
-                            aria-hidden="true">↗</span></a><a class="button" href="contact.html">Bắt đầu một project</a>
-                </div>
+  <!-- SITE NAVIGATION -->
+  <nav class="site-nav" aria-label="Điều hướng chính">
+    <a class="brand" href="index.html">
+      ZUNIX <span>// 02</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+    <div class="nav-links">
+      <a aria-current="page" href="index.html"><b>01</b> Trang chủ</a>
+      <a href="works.html"><b>02</b> Dự án</a>
+      <a href="about.html"><b>03</b> Giới thiệu</a>
+      <a class="nav-cta" href="contact.html"><b>04</b> Bắt đầu Project ↗</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- CINEMATIC HERO -->
+    <section class="container hero-cinema">
+      <div class="hero-left reveal">
+        <div class="hero-tag">
+          <span>CURATOR // PACING & RETENTION</span>
+        </div>
+        <h1>
+          CRAFTING<br>
+          <span class="accent">RETENTION</span><br>
+          THROUGH FRAMES.<span class="script">edit.</span>
+        </h1>
+        <p class="hero-bio">
+          Mình là Tiến Dũng — Zunix. Xuất phát điểm từ một Creator hiểu rõ tâm lý click và nhịp điệu giữ chân khán giả, mình biến footage thô thành tác phẩm cuốn hút đến giây cuối cùng.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="works.html">XEM REEL DỰ ÁN ↗</a>
+          <a class="button" href="contact.html">TRAO ĐỔI BRIEF</a>
+        </div>
+      </div>
+
+      <!-- ANAMORPHIC FRAME CANVAS -->
+      <div class="hero-visual reveal">
+        <div class="hero-frame-canvas">
+          <span class="corner-cross corner-top-left"></span>
+          <span class="corner-cross corner-bottom-right"></span>
+          <div class="frame-top-meta">
+            <span class="frame-rec-dot">LIVE EDITING</span>
+            <span>CAM_01 // PRORES 422</span>
+          </div>
+          <div class="frame-img-box">
+            <img src="../photo.jpg" width="1232" height="1232" alt="Chân dung Tiến Dũng - Zunix Video Editor">
+          </div>
+          <div class="frame-bottom-meta">
+            <span>ZUNIX // TIẾN DŨNG</span>
+            <span>AUDIO SYNC: 48kHz</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK (CINEMA REEL) -->
+    <section class="container section reveal">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">FEATURED WORK</span>
+          <h2 class="section-title">Project tâm đắc<br><span style="color:var(--mint)">đã hoàn thiện.</span></h2>
+        </div>
+        <a class="button" href="works.html">XEM TẤT CẢ 10 FILM ↗</a>
+      </div>
+
+      <div class="cinema-reel-grid">
+        <!-- Film 01 -->
+        <button class="reel-film-card" type="button" data-video="OoC2H5Q2zI0" data-title="Gaming Edit">
+          <div class="reel-thumb-box">
+            <img loading="lazy" src="https://i.ytimg.com/vi/OoC2H5Q2zI0/hqdefault.jpg" alt="Thumbnail video Gaming Edit">
+            <span class="film-format-badge">16:9 · 4K</span>
+            <div class="film-play-overlay">
+              <span class="play-ring"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
             </div>
-
-        </section>
-        <section class="container section reveal" id="showcase">
-            <div class="section-head">
-                <div>
-                    <p class="eyebrow">Video Showcase</p>
-                    <h2 class="section-title">Một vài project<br>mình <span style="color:var(--pink)">tâm đắc.</span>
-                    </h2>
-                </div>
-                <a class="button" href="works.html">Xem tất cả project <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="reel-film-meta">
+            <div>
+              <h3>Gaming Edit</h3>
+              <span>GAMING // HIGH-ENERGY PACING</span>
             </div>
+            <span class="reel-film-arrow">PLAY ↗</span>
+          </div>
+        </button>
 
-            <div class="shorts-showcase-grid">
-                <!-- Shorts 1: OjRZA4ChV9E -->
-                <div class="shorts-showcase-card">
-                    <iframe class="shorts-iframe"
-                        data-src="https://www.youtube.com/embed/OjRZA4ChV9E?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=OjRZA4ChV9E"
-                        title="Shorts Showcase 1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Shorts 2: UnC-rk2Q35c -->
-                <div class="shorts-showcase-card">
-                    <iframe class="shorts-iframe"
-                        data-src="https://www.youtube.com/embed/UnC-rk2Q35c?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=UnC-rk2Q35c"
-                        title="Shorts Showcase 2"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Shorts 3: BIWrDS52Cvs -->
-                <div class="shorts-showcase-card">
-                    <iframe class="shorts-iframe"
-                        data-src="https://www.youtube.com/embed/BIWrDS52Cvs?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=BIWrDS52Cvs"
-                        title="Shorts Showcase 3"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+        <!-- Film 02 -->
+        <button class="reel-film-card" type="button" data-video="aDZMoTmb7uc" data-title="Hướng Dẫn Sử Dụng">
+          <div class="reel-thumb-box">
+            <img loading="lazy" src="https://i.ytimg.com/vi/aDZMoTmb7uc/hqdefault.jpg" alt="Thumbnail video Hướng Dẫn Sử Dụng">
+            <span class="film-format-badge">16:9 · FHD</span>
+            <div class="film-play-overlay">
+              <span class="play-ring"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
             </div>
-        </section>
-        <section class="container section reveal">
-            <div class="section-head">
-                <div>
-                    <p class="eyebrow">What I do</p>
-                    <h2 class="section-title">Edit đúng format.<br>Kể đúng <span style="color:var(--cyan)">câu
-                            chuyện.</span></h2>
-                </div>
+          </div>
+          <div class="reel-film-meta">
+            <div>
+              <h3>Hướng Dẫn Sử Dụng</h3>
+              <span>TUTORIAL // CLEAR EXPLANATION</span>
             </div>
-            <div class="service-grid">
-                <!-- 01: Podcast kể chuyện -->
-                <article class="service">
-                    <span class="service-index">01 / PODCAST</span>
-                    <h3>Podcast kể chuyện</h3>
-                    <p>Cân bằng âm thanh, chèn SFX, tạo nhịp nói lôi cuốn và giữ mạch cảm xúc sâu lắng cho từng câu
-                        chuyện.</p>
-                </article>
+            <span class="reel-film-arrow">PLAY ↗</span>
+          </div>
+        </button>
 
-                <!-- 02: Storytelling & Cinematic -->
-                <article class="service">
-                    <span class="service-index">02 / CINEMATIC</span>
-                    <h3>Storytelling & Cinematic</h3>
-                    <p>Biên tập chiều sâu, chỉnh màu Color Grading điện ảnh và phối âm thanh nâng tầm cảm xúc người xem.
-                    </p>
-                </article>
-
-                <!-- 03: Gaming & Highlight -->
-                <article class="service">
-                    <span class="service-index">03 / GAMING</span>
-                    <h3>Gaming & Highlight</h3>
-                    <p>Fast-paced editing, meme hài hước, hiệu ứng âm thanh và cắt tỉa những pha bắt khoảnh khắc cực
-                        đỉnh.</p>
-                </article>
-
-                <!-- 04: Vlog daily & du lịch -->
-                <article class="service">
-                    <span class="service-index">04 / VLOG</span>
-                    <h3>Vlog daily & du lịch</h3>
-                    <p>Nhịp dựng tự nhiên, màu sắc tươi sáng, chuyển cảnh mượt mà truyền cảm hứng trải nghiệm cuộc sống.
-                    </p>
-                </article>
-
-                <!-- 05: Video quảng cáo & chạy ads -->
-                <article class="service">
-                    <span class="service-index">05 / COMMERCIAL</span>
-                    <h3>Video quảng cáo & chạy ads</h3>
-                    <p>Tối ưu Hook 3 giây đầu, kêu gọi hành động CTA sắc bén, gia tăng tỷ lệ chuyển đổi cho doanh
-                        nghiệp.</p>
-                </article>
-
-                <!-- 06: Bất động sản - chuyên nghiệp -->
-                <article class="service">
-                    <span class="service-index">06 / REAL ESTATE</span>
-                    <h3>Bất động sản - chuyên nghiệp</h3>
-                    <p>Góc quay sang trọng, giới thiệu không gian chỉn chu, đồ họa text tinh tế và nhạc nền đẳng cấp.
-                    </p>
-                </article>
+        <!-- Film 03 -->
+        <button class="reel-film-card" type="button" data-video="tctA52FN5ks" data-title="Giới Thiệu Sản Phẩm">
+          <div class="reel-thumb-box">
+            <img loading="lazy" src="https://i.ytimg.com/vi/tctA52FN5ks/hqdefault.jpg" alt="Thumbnail video Giới thiệu sản phẩm">
+            <span class="film-format-badge">16:9 · COMMERCIAL</span>
+            <div class="film-play-overlay">
+              <span class="play-ring"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
             </div>
-        </section>
-        <section class="container section reveal">
-            <div class="section-head">
-                <div>
-                    <p class="eyebrow">Creative toolkit</p>
-                    <h2 class="section-title">Những app đứng sau<br>mỗi <span style="color:var(--pink)">khung
-                            hình.</span></h2>
-                </div>
-                <p class="muted toolkit-intro">Thành thạo hệ sinh thái phần mềm chuyên nghiệp tiêu chuẩn để mang đến
-                    trải nghiệm hình ảnh và âm thanh cao cấp nhất.</p>
+          </div>
+          <div class="reel-film-meta">
+            <div>
+              <h3>Giới Thiệu Sản Phẩm</h3>
+              <span>BRANDING // CLEAN AESTHETIC</span>
             </div>
-            <div class="toolkit-grid">
-                <article class="toolkit-card" style="--tool:#9999ff"><span class="toolkit-number">01</span>
-                    <div class="toolkit-icon"><img
-                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobepremierepro.svg"
-                            alt="Logo Adobe Premiere Pro"></div>
-                    <div><span class="toolkit-role">Main Editing</span>
-                        <h3>Premiere Pro</h3>
-                        <p>Dựng phim chuyên nghiệp, xử lý nhịp, cắt thô và hoàn thiện timeline.</p>
-                    </div>
-                </article>
-                <article class="toolkit-card" style="--tool:#36e6c4"><span class="toolkit-number">02</span>
-                    <div class="toolkit-icon"><img
-                            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Capcut-icon.svg"
-                            alt="Logo CapCut"></div>
-                    <div><span class="toolkit-role">Fast Workflow</span>
-                        <h3>CapCut PC</h3>
-                        <p>Short-form nhanh, caption linh hoạt và tối ưu nội dung dọc bắt trend.</p>
-                    </div>
-                </article>
-                <article class="toolkit-card" style="--tool:#9999ff"><span class="toolkit-number">03</span>
-                    <div class="toolkit-icon"><img
-                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeaftereffects.svg"
-                            alt="Logo Adobe After Effects"></div>
-                    <div><span class="toolkit-role">Motion & Effects</span>
-                        <h3>After Effects</h3>
-                        <p>Motion graphics, compositing và hiệu ứng kỹ xảo visual ấn tượng.</p>
-                    </div>
-                </article>
-                <article class="toolkit-card" style="--tool:#31a8ff"><span class="toolkit-number">04</span>
-                    <div class="toolkit-icon"><img
-                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobephotoshop.svg"
-                            alt="Logo Adobe Photoshop"></div>
-                    <div><span class="toolkit-role">Visual Design</span>
-                        <h3>Photoshop</h3>
-                        <p>Thumbnail, asset và xử lý hình ảnh bắt mắt thu hút click.</p>
-                    </div>
-                </article>
-                <article class="toolkit-card" style="--tool:#ff9a00"><span class="toolkit-number">05</span>
-                    <div class="toolkit-icon"><img
-                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeillustrator.svg"
-                            alt="Logo Adobe Illustrator"></div>
-                    <div><span class="toolkit-role">Vector Art</span>
-                        <h3>Illustrator</h3>
-                        <p>Vector art, typography và các branding elements phục vụ video.</p>
-                    </div>
-                </article>
-                <article class="toolkit-card" style="--tool:#00e5bf"><span class="toolkit-number">06</span>
-                    <div class="toolkit-icon"><img
-                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeaudition.svg"
-                            alt="Logo Adobe Audition"></div>
-                    <div><span class="toolkit-role">Audio Processing</span>
-                        <h3>Audition</h3>
-                        <p>Xử lý lọc tạp âm, cân bằng voiceover và tối ưu âm thanh sống động.</p>
-                    </div>
-                </article>
+            <span class="reel-film-arrow">PLAY ↗</span>
+          </div>
+        </button>
+
+        <!-- Film 04 -->
+        <button class="reel-film-card" type="button" data-video="XbWvekYLxrg" data-title="Vlog Visual Diary">
+          <div class="reel-thumb-box">
+            <img loading="lazy" src="https://i.ytimg.com/vi/XbWvekYLxrg/hqdefault.jpg" alt="Thumbnail video Vlog Visual Diary">
+            <span class="film-format-badge">16:9 · CINEMATIC</span>
+            <div class="film-play-overlay">
+              <span class="play-ring"><svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
             </div>
-        </section>
-        <section class="container section reveal">
-            <div class="cta">
-                <div>
-                    <p class="eyebrow">Start a project</p>
-                    <h2>Có footage?<br>Mình biến nó thành <span style="color:var(--pink)">câu chuyện.</span></h2>
-                </div><a class="button primary" href="contact.html">Liên hệ ngay <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="reel-film-meta">
+            <div>
+              <h3>Vlog Visual Diary</h3>
+              <span>LIFESTYLE // MOOD & SOUNDSCAPE</span>
             </div>
-        </section>
-    </main>
-    <dialog id="video-modal" class="video-modal" aria-labelledby="video-modal-title">
-        <header><span id="video-modal-title">Xem project</span><button type="button" data-close-video
-                aria-label="Đóng video">Đóng</button></header>
-        <div class="video-stage"><iframe data-video-frame title="Video project của DuckTai"
-                allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
-    </dialog>
-    <footer class="container footer"><span>© <span data-year></span> DuckTai - Creative Video Editor</span><a
-            href="//www.dmca.com/Protection/Status.aspx?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f"
-            title="DMCA.com Protection Status" class="dmca-badge"><img
-                src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f"
-                alt="DMCA.com Protection Status"></a><span>TP. Hồ Chí Minh, Vietnam · GMT+7</span></footer>
-    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-    <script src="site.js"></script>
+            <span class="reel-film-arrow">PLAY ↗</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- WHAT I DO (EDIT MODES) -->
+    <section class="container section reveal">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">CORE DISCIPLINES</span>
+          <h2 class="section-title">Edit đúng format.<br><span style="color:var(--ocean)">Kể đúng câu chuyện.</span></h2>
+        </div>
+      </div>
+
+      <div class="edit-modes-grid">
+        <article class="edit-mode-card">
+          <span class="edit-mode-code">// MODE 01 · LONG-FORM</span>
+          <h3>YouTube & Vlog</h3>
+          <p>Pacing chặt chẽ, giữ vững mạch cảm xúc và cấu trúc câu chuyện để video dài không bao giờ bị rơi nhịp.</p>
+        </article>
+
+        <article class="edit-mode-card">
+          <span class="edit-mode-code">// MODE 02 · SHORT-FORM</span>
+          <h3>TikTok & Reels</h3>
+          <p>Hook thị giác trong 3 giây đầu, caption động bắt mắt và nhịp dựng dồn dập chuẩn trải nghiệm màn hình dọc.</p>
+        </article>
+
+        <article class="edit-mode-card">
+          <span class="edit-mode-code">// MODE 03 · BRAND IDENTITY</span>
+          <h3>Gaming & Thương Mại</h3>
+          <p>Thiết kế sound design tỉ mỉ, hiệu ứng motion graphics và tông màu chuẩn cá tính thương hiệu.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE MIXING DECK (6 APPS) -->
+    <section class="container section reveal">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">THE MIXING CONSOLE</span>
+          <h2 class="section-title">Bộ công cụ hậu kỳ<br><span style="color:var(--mint)">chuyên sâu.</span></h2>
+        </div>
+        <p class="muted" style="max-width:380px; margin:0; font-size:0.9rem">Bàn điều khiển 6 ứng dụng đảm nhiệm từng khâu chuẩn xác trong dây chuyền sản xuất video.</p>
+      </div>
+
+      <div class="mixing-deck-grid">
+        <!-- CH 01: Premiere Pro -->
+        <article class="deck-channel-card" style="--channel-color:#118AB2">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 01</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobepremierepro.svg" alt="Premiere Pro">
+          </div>
+          <span class="channel-role">Dựng chính & Pacing</span>
+          <h3>Premiere Pro</h3>
+          <p>Dựng thô, cắt nhịp phim, đồng bộ multicam và hoàn thiện timeline chính.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 95%;"></div>
+          </div>
+        </article>
+
+        <!-- CH 02: Photoshop -->
+        <article class="deck-channel-card" style="--channel-color:#7CD5C7">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 02</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobephotoshop.svg" alt="Photoshop">
+          </div>
+          <span class="channel-role">Thumbnail & Asset</span>
+          <h3>Photoshop</h3>
+          <p>Thiết kế thumbnail CTR cao và xử lý đồ họa, asset hình ảnh trong video.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 88%;"></div>
+          </div>
+        </article>
+
+        <!-- CH 03: After Effects -->
+        <article class="deck-channel-card" style="--channel-color:#464B71">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 03</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeaftereffects.svg" alt="After Effects">
+          </div>
+          <span class="channel-role">Motion Graphics & VFX</span>
+          <h3>After Effects</h3>
+          <p>Tạo chuyển động đồ họa, kỹ xảo visual, tracking và typography animation.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 85%;"></div>
+          </div>
+        </article>
+
+        <!-- CH 04: Audition -->
+        <article class="deck-channel-card" style="--channel-color:#118AB2">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 04</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobeaudition.svg" alt="Audition">
+          </div>
+          <span class="channel-role">Xử lý âm thanh</span>
+          <h3>Audition</h3>
+          <p>Khử tạp âm, lọc nhiễu, cân bằng dải tần EQ và master voiceover trong trẻo.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 82%;"></div>
+          </div>
+        </article>
+
+        <!-- CH 05: CapCut -->
+        <article class="deck-channel-card" style="--channel-color:#7CD5C7">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 05</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Capcut-icon.svg" alt="CapCut">
+          </div>
+          <span class="channel-role">Short-form linh hoạt</span>
+          <h3>CapCut</h3>
+          <p>Dựng nhanh nội dung TikTok/Reels, tạo auto-caption và bắt kịp trending.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 80%;"></div>
+          </div>
+        </article>
+
+        <!-- CH 06: ChatGPT -->
+        <article class="deck-channel-card" style="--channel-color:#464B71">
+          <div class="channel-header">
+            <span class="channel-idx">CH // 06</span>
+            <span class="channel-status">ACTIVE</span>
+          </div>
+          <div class="channel-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="ChatGPT">
+          </div>
+          <span class="channel-role">Ý tưởng & Kịch bản</span>
+          <h3>ChatGPT</h3>
+          <p>Nghiên cứu góc nhìn câu chuyện, gợi ý câu hook mở đầu và tối ưu kịch bản.</p>
+          <div class="fader-meter">
+            <div class="fader-meter-fill" style="width: 85%;"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SLATE BOARD CTA -->
+    <section class="container section reveal">
+      <div class="slate-banner">
+        <div>
+          <span class="eyebrow">READY TO ROLL</span>
+          <h2>Có footage thô?<br>Cùng biến thành <span style="color:var(--mint)">tác phẩm.</span></h2>
+        </div>
+        <a class="button primary" href="contact.html">BẮT ĐẦU DỰ ÁN ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- VIDEO MODAL -->
+  <dialog id="video-modal" class="video-modal" aria-labelledby="video-modal-title">
+    <header>
+      <span id="video-modal-title">STUDIO PLAYBACK // REEL</span>
+      <button type="button" data-close-video aria-label="Đóng video">CLOSE [X]</button>
+    </header>
+    <div class="video-stage">
+      <iframe data-video-frame title="Video project của Zunix" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer class="container footer">
+    <span>© <span data-year></span> ZUNIX STUDIO — ALL RIGHTS RESERVED</span>
+    <a href="//www.dmca.com/Protection/Status.aspx?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" title="DMCA.com Protection Status" class="dmca-badge">
+      <img src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f" alt="DMCA.com Protection Status">
+    </a>
+    <span>LOCATION // VIETNAM · GMT+7</span>
+  </footer>
+
+  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+  <script src="site.js"></script>
 </body>
-
 </html>
