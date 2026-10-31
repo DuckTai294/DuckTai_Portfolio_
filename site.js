@@ -1,3 +1,45 @@
+/* Modern Atmospheric Loading Screen Engine */
+(function initAppLoader() {
+  if (document.getElementById('app-loader')) return;
+  const loader = document.createElement('div');
+  loader.id = 'app-loader';
+  loader.className = 'app-loader';
+  loader.innerHTML = '<div class="loader-content"><div class="loader-logo">DUCKTAI<span class="loader-dot">.</span></div><div class="loader-bar-wrap"><div class="loader-bar"></div></div><div class="loader-info"><span>CREATIVE TIMELINE</span><span class="loader-num">0%</span></div></div>';
+
+  if (document.body) {
+    document.body.prepend(loader);
+  } else {
+    document.addEventListener('DOMContentLoaded', () => document.body.prepend(loader));
+  }
+
+  const bar = loader.querySelector('.loader-bar');
+  const num = loader.querySelector('.loader-num');
+  let pct = 0;
+
+  const finishLoader = () => {
+    pct = 100;
+    if (bar) bar.style.width = '100%';
+    if (num) num.textContent = '100%';
+    setTimeout(() => {
+      loader.classList.add('is-loaded');
+    }, 280);
+  };
+
+  const timer = setInterval(() => {
+    pct += Math.floor(Math.random() * 22) + 14;
+    if (pct >= 100) {
+      pct = 100;
+      clearInterval(timer);
+      finishLoader();
+    } else {
+      if (bar) bar.style.width = pct + '%';
+      if (num) num.textContent = pct + '%';
+    }
+  }, 45);
+
+  window.addEventListener('load', finishLoader);
+})();
+
 /* Shared interactions. Content stays visible without JavaScript. */
 (() => {
   'use strict';
@@ -38,7 +80,7 @@
     matchMedia('(max-width: 700px)').addEventListener('change', () => setMenu(false));
   }
 
-  // Reading timeline: no blocking loader or artificial percentage.
+  // Reading timeline follows the actual scroll position.
   const progress = document.createElement('div');
   progress.className = 'reading-progress';
   progress.setAttribute('aria-hidden', 'true');
