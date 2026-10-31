@@ -10,6 +10,7 @@
   <title>Dự án — DuckTai Portfolio</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="redesign.css">
+    <link rel="stylesheet" href="motion.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
   </nav>
   <main>
     <header class="container page-hero reveal">
-      <p class="eyebrow">Project chọn lọc · 52 project</p>
+      <p class="eyebrow">Project chọn lọc · <span data-project-total>50</span> project</p>
       <h1 class="work-poster"><span class="work-poster-lead"><span class="lead-hand">Project</span><span
             class="lead-sans">được dựng để</span></span><strong class="retention-title"><span
             class="retention-outline">GIỮ</span><span class="retention-solid">CHÂN</span></strong><span
@@ -59,7 +60,7 @@
           <div>
             <p class="eyebrow">Phần 02 · Short-form & Gaming Shorts</p>
             <h2>Shorts / Reels</h2>
-          </div><span id="shortform-count">23 PROJECT · 9:16</span>
+          </div><span id="shortform-count">21 PROJECT · 9:16</span>
         </div>
         <div class="filter-tabs" id="shortform-filters"><button class="filter-tab active" data-filter="all">Tất
             cả</button><button class="filter-tab" data-filter="Gaming Shorts">Gaming Shorts</button><button
@@ -88,7 +89,7 @@
       title="DMCA.com Protection Status" class="dmca-badge"><img
         src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=b2ad9fd4-a7ca-4e9a-b8ed-6171b14ab98f"
         alt="DMCA.com Protection Status"></a><span>TP. Hồ Chí Minh, Vietnam · GMT+7</span></footer>
-  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+  <script defer src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
   <script src="site.js"></script>
   <script>
     const longForm = [
@@ -160,6 +161,7 @@
 
     function openVideo(card, name, id, format = 'landscape', platform = 'youtube') {
       lastCard = card;
+      player.classList.remove('is-closing');
       playerTitle.textContent = name;
 
       if (platform === 'tiktok') {
@@ -178,21 +180,31 @@
       closeButton.focus();
     }
 
-    function card([name, id, category, platform = 'youtube', customThumb = ''], format, featured = false) {
+    function card([name, id, category, platform = 'youtube', customThumb = ''], format, featured = false, index = 0) {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'gallery-card gallery-' + format + (featured ? ' featured-film' : '');
       button.dataset.category = category;
+      button.style.setProperty('--stagger', Math.min(index, 5));
 
       const isTikTok = platform === 'tiktok';
       const badgeText = isTikTok ? 'TikTok · 9:16' : (format === 'portrait' ? '9:16' : '16:9');
       const quality = featured ? 'maxresdefault' : (format === 'landscape' ? 'sddefault' : 'hqdefault');
 
-      let thumbSrc = customThumb || ('https://img.youtube.com/vi/' + id + '/' + quality + '.jpg');
+      const thumbSrc = customThumb || ('https://img.youtube.com/vi/' + id + '/' + quality + '.jpg');
 
-      const mediaContent = `<img loading="lazy" src="${thumbSrc}" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'" alt="Thumbnail video ${name}">`;
-
-      button.innerHTML = '<span class="gallery-media">' + mediaContent + '<i class="play-button" aria-hidden="true"></i><b>' + badgeText + '</b></span><span class="gallery-copy"><small>' + category + (isTikTok ? ' · TikTok' : '') + '</small><strong>' + name + '</strong><em>Xem video →</em></span>';
+      button.innerHTML = '<span class="gallery-media"><i class="play-button" aria-hidden="true"></i><b></b></span><span class="gallery-copy"><small></small><strong></strong><em>Xem video →</em></span>';
+      const thumbnail = document.createElement('img');
+      thumbnail.loading = 'lazy';
+      thumbnail.src = thumbSrc;
+      thumbnail.alt = 'Thumbnail video ' + name;
+      thumbnail.addEventListener('error', () => {
+        if (!isTikTok) thumbnail.src = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
+      }, { once: true });
+      button.querySelector('.gallery-media').prepend(thumbnail);
+      button.querySelector('.gallery-media b').textContent = badgeText;
+      button.querySelector('.gallery-copy small').textContent = category + (isTikTok ? ' · TikTok' : '');
+      button.querySelector('.gallery-copy strong').textContent = name;
       button.addEventListener('click', () => openVideo(button, name, id, format, platform));
       return button;
     }
@@ -205,9 +217,10 @@
       featuredContainer.innerHTML = '';
       landscapeContainer.innerHTML = '';
       const filtered = filter === 'all' ? longForm : longForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
+      document.getElementById('longform-count').textContent = filtered.length.toString().padStart(2, '0') + ' PROJECT · 16:9';
       if (filtered.length > 0) {
         featuredContainer.appendChild(card(filtered[0], 'landscape', true));
-        filtered.slice(1).forEach(item => landscapeContainer.appendChild(card(item, 'landscape')));
+        filtered.slice(1).forEach((item, index) => landscapeContainer.appendChild(card(item, 'landscape', false, index)));
         document.getElementById('more-cuts-count').textContent = (filtered.length - 1).toString().padStart(2, '0') + ' CUTS · 16:9';
       } else {
         landscapeContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
@@ -219,7 +232,7 @@
       portraitContainer.innerHTML = '';
       const filtered = filter === 'all' ? shortForm : shortForm.filter(item => item[2].toLowerCase() === filter.toLowerCase());
       if (filtered.length > 0) {
-        filtered.forEach(item => portraitContainer.appendChild(card(item, 'portrait')));
+        filtered.forEach((item, index) => portraitContainer.appendChild(card(item, 'portrait', false, index)));
         document.getElementById('shortform-count').textContent = filtered.length.toString().padStart(2, '0') + ' PROJECT · 9:16';
       } else {
         portraitContainer.innerHTML = '<p class="muted" style="grid-column: 1 / -1; padding: 2rem 0;">Không tìm thấy video nào thuộc thể loại này.</p>';
@@ -227,22 +240,32 @@
       }
     }
 
+    const projectTotal = document.querySelector('[data-project-total]');
+    if (projectTotal) projectTotal.textContent = longForm.length + shortForm.length;
     renderLongform('all');
     renderShortform('all');
 
     // Tabs Filter Events
+    document.querySelectorAll('.filter-tab').forEach(btn => {
+      btn.type = 'button';
+      btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
+    });
     document.querySelectorAll('#longform-filters .filter-tab').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('#longform-filters .filter-tab').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('#longform-filters .filter-tab').forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-pressed', String(b === btn));
+        });
         renderLongform(btn.dataset.filter);
       });
     });
 
     document.querySelectorAll('#shortform-filters .filter-tab').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('#shortform-filters .filter-tab').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('#shortform-filters .filter-tab').forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-pressed', String(b === btn));
+        });
         renderShortform(btn.dataset.filter);
       });
     });
@@ -252,16 +275,22 @@
       const delay = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : 240;
       player.classList.add('is-closing');
       setTimeout(() => {
-        frame.src = '';
+        frame.removeAttribute('srcdoc');
+        frame.src = 'about:blank';
         player.close();
         player.classList.remove('is-closing');
+        player.classList.remove('is-portrait');
         lastCard?.focus();
       }, delay);
     }
 
     closeButton.addEventListener('click', closePlayer);
     player.addEventListener('cancel', event => { event.preventDefault(); closePlayer(); });
-    player.addEventListener('click', event => { if (event.target === player) closePlayer(); });
+    player.addEventListener('click', event => {
+      if (event.target !== player) return;
+      const bounds = player.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closePlayer();
+    });
   </script>
 </body>
 

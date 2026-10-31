@@ -10,6 +10,7 @@
   <title>Preset Pack — DuckTai</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="redesign.css">
+    <link rel="stylesheet" href="motion.css">
 </head>
 
 <body class="preset-page">
@@ -346,26 +347,8 @@
     <span>TP. Hồ Chí Minh, Vietnam · GMT+7</span>
   </footer>
 
-  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+  <script defer src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
   <script src="site.js"></script>
-  <script>
-    /* Copy to clipboard */
-    document.querySelectorAll('.checkout-copy-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const text = btn.dataset.copy;
-        try {
-          await navigator.clipboard.writeText(text);
-          const toast = document.querySelector('.toast');
-          if (toast) {
-            toast.textContent = 'Đã sao chép: ' + text;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 1800);
-          }
-        } catch (e) { /* fallback silent */ }
-      });
-    });
-
-  </script>
 </body>
 
 </html>

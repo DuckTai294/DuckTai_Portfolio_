@@ -1,0 +1,58 @@
+/* Motion only: original grids, spacing, colors and typography are retained. */
+html { overflow-x: clip; scrollbar-gutter: stable; }
+.reveal, .reveal.visible, .reveal.is-visible {
+  opacity: 1; transform: none; transition: none; animation: none; will-change: auto;
+}
+.service-grid .service, .project-grid .project-card, .toolkit-grid .toolkit-card,
+.facts-bento-grid .fact-card, .why-cards-grid .why-card, .process-flow-grid .process-step,
+.shorts-showcase-grid .shorts-showcase-card {
+  opacity: 1; transform: none; transition-delay: 0s;
+}
+.motion-item, .hero-copy, .hero-visual, .hero .display, .page-hero h1,
+.work-poster, .hero .muted, .page-hero .muted, .hero .eyebrow,
+.page-hero .eyebrow, .footer { animation: none !important; }
+
+.reading-progress {
+  position: fixed; inset: 0 0 auto; height: 2px; z-index: 10000;
+  background: linear-gradient(90deg, var(--pink), var(--cyan));
+  box-shadow: 0 0 12px #ff4d8d55; transform: scaleX(0);
+  transform-origin: left; pointer-events: none;
+}
+.button::before { left: -65%; transition: transform .65s var(--ease); }
+.button:hover::before, .button:focus-visible::before { left: -65%; transform: translateX(350%) skewX(-20deg); }
+.button span[aria-hidden], .contact-card .arrow { display: inline-block; transition: transform .3s var(--ease); }
+.button:hover span[aria-hidden], .button:focus-visible span[aria-hidden],
+.contact-card:hover .arrow, .contact-card:focus-visible .arrow { transform: translate(3px, -2px); }
+.button:active, .filter-tab:active { transform: scale(.97); }
+.nav-toggle { transition: background-color .25s, border-color .25s; }
+.nav-toggle svg { transition: transform .35s var(--ease); }
+.nav-toggle[aria-expanded="true"] svg { transform: rotate(90deg); }
+.nav-links a:focus-visible::after { transform: scaleX(1); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .reveal.visible .service:hover, .reveal .service:hover, .reveal .toolkit-card:hover,
+  .reveal .project-card:hover, .reveal .fact-card:hover, .reveal .why-card:hover,
+  .reveal .process-step:hover, .gallery-card:hover {
+    transform: translateY(-5px); transition-delay: 0s;
+  }
+  .toolkit-card .toolkit-icon { transition: transform .45s var(--ease); }
+  .toolkit-card:hover .toolkit-icon { transform: translateY(-3px) rotate(-4deg); }
+}
+.shorts-iframe { pointer-events: auto; }
+html.custom-cursor-active iframe { cursor: auto !important; }
+.has-open-dialog { overflow: hidden; }
+.faq-animating { overflow: hidden; }
+.faq-list details { transition: border-color .25s ease; }
+.faq-list details[open] { border-color: #ff4d8d55; }
+.faq-list summary { touch-action: manipulation; }
+.clipboard-helper { position: fixed; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; }
+.toast { max-width: calc(100vw - 32px); width: max-content; text-align: center; overflow-wrap: anywhere; pointer-events: none; }
+
+/* Keep this last: earlier legacy rules must not override the user's preference. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal, .motion-item { opacity: 1 !important; transform: none !important; }
+  .cursor-dot, .cursor-ring, .cursor-ripple { display: none !important; }
+  .button:hover, .button:active, .button span[aria-hidden], .contact-card .arrow,
+  .toolkit-icon, .nav-toggle svg { transform: none !important; }
+}
