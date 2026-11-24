@@ -10,17 +10,17 @@ window.PORTFOLIO = {
   // Video showreel ở đầu trang chủ. Khi có showreel riêng, thay id YouTube tại đây.
   showreel: { title: 'Showreel', id: '3Dj5D4r3oys' },
 
-  // Màu nhãn theo thể loại (giống label color trong Premiere)
+  // Màu nhãn theo thể loại — bảng màu label của Premiere (Violet, Caribbean, Rose, Mango…)
   categories: {
-    'Bất động sản': '#2dd4bf',
-    'Sự kiện': '#f472b6',
-    'Podcast': '#f5b041',
-    'Gaming': '#8b7cf6',
-    'Gaming Shorts': '#8b7cf6',
-    'Khóa học': '#60a5fa',
-    'Giáo dục': '#38bdf8',
-    'Review': '#a3e635',
-    'Quảng cáo': '#fb7a4a'
+    'Bất động sản': '#2fb592',
+    'Sự kiện': '#d0688f',
+    'Podcast': '#d98a35',
+    'Gaming': '#9a82d6',
+    'Gaming Shorts': '#9a82d6',
+    'Khóa học': '#2f97cf',
+    'Giáo dục': '#7a8bd6',
+    'Review': '#5c9e3d',
+    'Quảng cáo': '#c486d6'
   },
 
   longForm: [
@@ -117,10 +117,10 @@ window.PORTFOLIO = {
 
   /* DỊCH VỤ — "price" để trống sẽ hiển thị "Báo giá theo brief". Ví dụ: 'Từ 300.000₫' */
   services: [
-    { code: 'A1', name: 'Shorts · Reels · TikTok', desc: 'Hook mạnh, caption động, nhịp nhanh bắt trend.', time: '1–2 ngày', price: '', color: '#f472b6' },
-    { code: 'A2', name: 'Video YouTube dài', desc: 'Gaming, vlog, review — giữ nhịp để người xem ở lại tới cuối.', time: '3–5 ngày', price: '', color: '#8b7cf6' },
-    { code: 'A3', name: 'Podcast & khoá học', desc: 'Lọc âm, cân bằng giọng, chèn đồ hoạ minh hoạ dễ hiểu.', time: '2–4 ngày', price: '', color: '#f5b041' },
-    { code: 'A4', name: 'Quảng cáo · sự kiện · BĐS', desc: 'Màu điện ảnh, CTA rõ ràng, đúng tinh thần thương hiệu.', time: '2–5 ngày', price: '', color: '#2dd4bf' }
+    { code: 'A1', name: 'Shorts · Reels · TikTok', desc: 'Hook mạnh, caption động, nhịp nhanh bắt trend.', time: '1–2 ngày', price: '', color: '#d0688f' },
+    { code: 'A2', name: 'Video YouTube dài', desc: 'Gaming, vlog, review — giữ nhịp để người xem ở lại tới cuối.', time: '3–5 ngày', price: '', color: '#9a82d6' },
+    { code: 'A3', name: 'Podcast & khoá học', desc: 'Lọc âm, cân bằng giọng, chèn đồ hoạ minh hoạ dễ hiểu.', time: '2–4 ngày', price: '', color: '#d98a35' },
+    { code: 'A4', name: 'Quảng cáo · sự kiện · BĐS', desc: 'Màu điện ảnh, CTA rõ ràng, đúng tinh thần thương hiệu.', time: '2–5 ngày', price: '', color: '#2fb592' }
   ],
 
   /* LỜI KHÁCH HÀNG — thêm vào đây thì mục Feedback mới hiện ra trên trang chủ.

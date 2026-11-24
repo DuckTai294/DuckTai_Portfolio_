@@ -18,12 +18,12 @@
 
   /* Danh sách preset trong bảng Effects */
   const fx = [
-    { id: 'zoom', name: 'Zoom Punch', ab: 'ZP', c1: '#2f6bff', c2: '#46dcff' },
-    { id: 'shake', name: 'Camera Shake', ab: 'SH', c1: '#ff7a1a', c2: '#ff4d5e' },
-    { id: 'glitch', name: 'RGB Glitch', ab: 'GL', c1: '#ff4fd8', c2: '#46dcff' },
-    { id: 'whip', name: 'Whip Pan', ab: 'WP', c1: '#8b5cf6', c2: '#2f6bff' },
-    { id: 'flash', name: 'Flash White', ab: 'FL', c1: '#ffffff', c2: '#a9c7ff' },
-    { id: 'speed', name: 'Speed Blur', ab: 'SB', c1: '#b8ff5c', c2: '#46dcff' }
+    { id: 'zoom', name: 'Zoom Punch', ab: 'ZP', c1: '#9a82d6', c2: '#9a82d6' },
+    { id: 'shake', name: 'Camera Shake', ab: 'SH', c1: '#d98a35', c2: '#d98a35' },
+    { id: 'glitch', name: 'RGB Glitch', ab: 'GL', c1: '#d0688f', c2: '#d0688f' },
+    { id: 'whip', name: 'Whip Pan', ab: 'WP', c1: '#7a8bd6', c2: '#7a8bd6' },
+    { id: 'flash', name: 'Flash White', ab: 'FL', c1: '#8a8a8a', c2: '#8a8a8a' },
+    { id: 'speed', name: 'Speed Blur', ab: 'SB', c1: '#2fb592', c2: '#2fb592' }
   ];
   const list = $('#pp-list');
   fx.forEach((f, i) => {

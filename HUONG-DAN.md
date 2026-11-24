@@ -11,8 +11,9 @@ Phong cách: nền xanh navy phát sáng, chữ kim loại, viên kính chữ pi
 - **Tua trang `J` / `K` / `L`** như tua video (bấm nhiều lần để 1x → 2x → 4x).
 - **Lumetri Color** ở trang chủ: thanh trượt Exposure/Contrast/Saturation/Temperature/Vignette, 6 LUT, kéo vạch so sánh trước/sau, scope RGB, chọn 2 clip (phòng gym, biển mây Y Tý).
   Đổi/thêm ảnh: sửa danh sách `clips` trong `assets/js/home.js` (ảnh 16:9, nên dùng ảnh không có chữ).
-- **Màu tối có chiều sâu + liquid glass** nằm trong `assets/css/depth.css`. Bỏ dòng nạp file này ở 3 trang HTML là quay về bản sáng cũ.
-  Liquid glass khúc xạ nền chỉ chạy trên Chrome/Edge; Safari/Firefox hiển thị bản kính mờ.
+- **Theme "Premiere" (đang dùng)** nằm trong `assets/css/premiere.css`, nạp sau cùng: nền xám trung tính, panel phẳng,
+  một màu nhấn xanh Adobe, clip timeline theo bảng màu nhãn Premiere, tắt cực quang/hạt phim/glitch/ánh kim/liquid glass.
+  Bỏ dòng nạp `premiere.css` ở 3 trang HTML là quay về bản xanh navy nhiều hiệu ứng (depth.css).
 - Đồng hồ VU nhảy theo tốc độ cuộn, nút transport, chip chuyển cảnh (Cross Dissolve…), thanh màu SMPTE, export bar khi gửi brief.
 - Nền cực quang, hạt phim, chữ kim loại có vệt sáng, glitch RGB chữ EDIT, đèn rọi theo chuột, nghiêng 3D, đếm số.
 - Tất cả tự tắt khi máy bật “giảm chuyển động”; con trỏ/Tools ẩn trên điện thoại.

@@ -5,7 +5,7 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const colorOf = cat => (D.categories && D.categories[cat]) || '#46dcff';
+  const colorOf = cat => (D.categories && D.categories[cat]) || '#8a8a8a';
 
   $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
