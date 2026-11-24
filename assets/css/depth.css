@@ -1,0 +1,169 @@
+/* ============================================================
+   DEPTH + LIQUID GLASS
+   - Nền tối navy-đen, ánh sáng chỉ tập trung ở vài điểm → có chiều sâu
+   - Liquid glass kiểu Apple: viền phản quang, vệt sáng theo chuột,
+     khúc xạ nền phía sau (Chrome/Edge; Safari/Firefox dùng bản mờ kính)
+   Muốn quay về bản sáng cũ: bỏ dòng nạp depth.css trong 3 file HTML.
+   ============================================================ */
+:root {
+  --bg0: #01030a;
+  --bg1: #040a1f;
+  --line: rgba(130, 165, 255, .09);
+  --line-2: rgba(130, 165, 255, .17);
+  --muted: #8794b4;
+  --dim: #535f7e;
+}
+
+/* ---------- Nền: tối hẳn, không còn quầng xanh cố định phủ cả trang ---------- */
+html { background: #01030a; background-attachment: scroll; }
+body::before { opacity: .22; mask-image: radial-gradient(ellipse 70% 50% at 50% 20%, #000 0%, transparent 70%); }
+
+/* Cực quang dịu lại, không cộng sáng (screen) nữa */
+.aurora i { mix-blend-mode: normal; filter: blur(120px); }
+.aurora i:nth-child(1) { opacity: .13; background: #1d4fe0; }
+.aurora i:nth-child(2) { opacity: .06; }
+.aurora i:nth-child(3) { opacity: .05; }
+.aurora i:nth-child(4) { opacity: .09; }
+
+/* Viền tối quanh màn hình (vignette) */
+.vignette { position: fixed; inset: 0; z-index: 94; pointer-events: none; background: radial-gradient(ellipse 120% 90% at 50% 45%, transparent 55%, rgba(0, 0, 0, .55) 100%); }
+.grain { opacity: .05; }
+
+/* ---------- Ánh sáng có chủ đích: hero + vài phần chính ---------- */
+.hero { isolation: isolate; }
+.hero::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: 0; width: 140vw; height: 115%; translate: -50% 0;
+  background:
+    radial-gradient(38% 46% at 50% 0%, rgba(80, 130, 255, .55) 0%, rgba(40, 90, 240, .3) 38%, transparent 72%),
+    radial-gradient(30% 40% at 18% 70%, rgba(47, 107, 255, .16), transparent 70%),
+    radial-gradient(26% 34% at 85% 62%, rgba(139, 92, 246, .14), transparent 70%);
+}
+.hero::after { /* sàn tối dần ở chân hero */
+  content: ''; position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; height: 30%; pointer-events: none;
+  background: linear-gradient(180deg, transparent, #01030a);
+}
+#bin, #mau, #lien-he, .page-head, .preset-hero { isolation: isolate; position: relative; }
+/* Quầng sáng rộng hơn màn hình: cắt phần thừa để không sinh thanh cuộn ngang */
+html, body { overflow-x: clip; }
+.hero, #bin, #mau, #lien-he, .page-head, .preset-hero { overflow-x: clip; overflow-clip-margin: 0; }
+#bin::before, #mau::before, #lien-he::before, .page-head::before, .preset-hero::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: 0; width: min(1500px, 130vw); height: min(900px, 100%); translate: -50% 0;
+  background: radial-gradient(45% 55% at 50% 22%, rgba(47, 107, 255, .32), rgba(30, 70, 200, .12) 45%, transparent 75%);
+}
+#mau::before { background: radial-gradient(40% 50% at 70% 40%, rgba(255, 79, 216, .14), transparent 70%), radial-gradient(45% 55% at 30% 45%, rgba(47, 107, 255, .26), transparent 75%); }
+#lien-he::before { background: radial-gradient(40% 55% at 75% 45%, rgba(47, 107, 255, .3), transparent 72%); }
+
+/* Chữ kim loại: tối hơn ở đáy để nổi khối */
+.chrome {
+  background-image: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, .95) 48%, rgba(170, 230, 255, .9) 52%, transparent 62%), linear-gradient(180deg, #ffffff 0%, #dfe7ff 22%, #8197c9 48%, #e9efff 58%, #8ea0cc 78%, #4b5d8f 100%);
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .35)) drop-shadow(0 12px 34px rgba(47, 107, 255, .32));
+}
+
+/* ---------- Kính tối có chiều sâu ---------- */
+.glass {
+  background:
+    radial-gradient(420px circle at var(--mx) var(--my), rgba(90, 150, 255, .10), transparent 62%),
+    linear-gradient(180deg, rgba(16, 28, 66, .7) 0%, rgba(7, 13, 34, .82) 100%);
+  border-color: rgba(130, 165, 255, .14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09), inset 0 -1px 0 rgba(0, 0, 0, .4), 0 24px 70px -20px rgba(0, 0, 0, .8), 0 0 0 1px rgba(0, 0, 0, .3);
+}
+.clip { background: radial-gradient(300px circle at var(--mx) var(--my), rgba(255, 79, 216, .10), transparent 60%), linear-gradient(180deg, rgba(14, 24, 58, .75), rgba(6, 11, 30, .85)); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .8); }
+.viewer, .photo { box-shadow: 0 40px 90px -30px rgba(0, 0, 0, .9), 0 0 60px -10px rgba(47, 107, 255, .25); }
+.folder .front { background: linear-gradient(180deg, rgba(120, 175, 255, .5) 0%, rgba(50, 110, 240, .42) 45%, rgba(24, 64, 190, .55) 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55), 0 24px 50px -16px rgba(0, 0, 0, .8), 0 0 30px -6px rgba(47, 107, 255, .45); }
+.folder .back { background: linear-gradient(180deg, rgba(60, 110, 230, .5), rgba(18, 50, 160, .55)); }
+.service:hover { background: radial-gradient(500px circle at var(--mx) var(--my), rgba(139, 92, 246, .14), transparent 60%), linear-gradient(90deg, rgba(47, 107, 255, .08), transparent 80%); }
+.mini-tl { background: rgba(5, 10, 28, .78); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 30px 70px -20px rgba(0, 0, 0, .85); }
+.proc-clip { background: linear-gradient(180deg, rgba(40, 90, 220, .26), rgba(12, 30, 110, .2)); }
+.proc-clip:nth-child(even) { background: linear-gradient(180deg, rgba(40, 170, 220, .16), rgba(10, 60, 110, .14)); }
+.dock { background: rgba(2, 5, 16, .78); }
+.footer { background: linear-gradient(180deg, transparent, rgba(47, 107, 255, .06)); }
+
+/* ============================================================
+   LIQUID GLASS
+   ============================================================ */
+.nav-pill, .nav-toggle, .btn:not(.btn-primary), .tools-panel, .tile, .mail-box, .shuttle, .chip[aria-pressed="true"], .toolbar .wrap, .dock-clip.is-active, .lm-luts button, .transport button.big, .player .close:not(.btn-primary) {
+  --lg-tint: rgba(255, 255, 255, .05);
+  background:
+    radial-gradient(160px circle at var(--mx, 30%) var(--my, 0%), rgba(255, 255, 255, .16), transparent 60%),
+    linear-gradient(135deg, rgba(255, 255, 255, .12) 0%, var(--lg-tint) 38%, rgba(255, 255, 255, .02) 60%, rgba(140, 190, 255, .08) 100%);
+  -webkit-backdrop-filter: blur(14px) saturate(190%) brightness(1.08);
+  backdrop-filter: blur(14px) saturate(190%) brightness(1.08);
+  border: 1px solid rgba(255, 255, 255, .14);
+  box-shadow:
+    inset 1.5px 1.5px 0 -0.5px rgba(255, 255, 255, .55),
+    inset -1px -1px 0 -0.5px rgba(255, 255, 255, .22),
+    inset 0 0 0 1px rgba(255, 255, 255, .04),
+    inset 0 -12px 24px -14px rgba(130, 190, 255, .45),
+    inset 0 10px 18px -12px rgba(255, 255, 255, .25),
+    0 10px 30px -8px rgba(0, 0, 0, .6);
+}
+/* Khúc xạ nền phía sau (chỉ Chrome/Edge hỗ trợ backdrop-filter: url()) */
+.nav-pill, .tools-panel, .btn:not(.btn-primary), .tile, .mail-box, .toolbar .wrap, .shuttle, .nav-toggle {
+  backdrop-filter: url(#lg-refract) blur(3px) saturate(190%) brightness(1.1);
+}
+.nav-pill a { color: #c9d3ee; text-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
+.nav-pill a small { color: #7d8bb0; }
+.btn:not(.btn-primary) { color: #eef3ff; text-shadow: 0 1px 2px rgba(0, 0, 0, .45); }
+
+/* Kính được chọn: ánh xanh bên trong */
+.chip[aria-pressed="true"], .dock-clip.is-active, .lm-luts button[aria-pressed="true"], .transport button.big, .nav-pill a.is-active, .nav-pill a[aria-current="page"], .tools-panel button[aria-pressed="true"] {
+  box-shadow:
+    inset 1.5px 1.5px 0 -0.5px rgba(255, 255, 255, .7),
+    inset -1px -1px 0 -0.5px rgba(255, 255, 255, .3),
+    inset 0 -10px 22px -10px rgba(70, 200, 255, .75),
+    inset 0 0 18px rgba(47, 107, 255, .45),
+    0 0 24px rgba(47, 107, 255, .45);
+  background: linear-gradient(180deg, rgba(120, 170, 255, .38), rgba(40, 90, 230, .3));
+  border-color: rgba(200, 225, 255, .4);
+}
+.lm-luts button[aria-pressed="true"] { background: linear-gradient(90deg, rgba(47, 107, 255, .55), rgba(139, 92, 246, .5), rgba(255, 79, 216, .5)); }
+.mail-box { border-color: rgba(160, 205, 255, .3); }
+.mail-box:hover { box-shadow: inset 1.5px 1.5px 0 -0.5px rgba(255, 255, 255, .6), inset 0 -14px 28px -12px rgba(70, 200, 255, .55), 0 0 50px rgba(47, 107, 255, .35); }
+
+/* Nút chính: giọt kính xanh bóng */
+.btn-primary {
+  background:
+    radial-gradient(120% 90% at 30% 0%, rgba(255, 255, 255, .45), transparent 55%),
+    linear-gradient(180deg, #4f8bff 0%, #2459f2 55%, #1438b8 100%);
+  border: 1px solid rgba(190, 220, 255, .55);
+  box-shadow: inset 1.5px 1.5px 0 -0.5px rgba(255, 255, 255, .8), inset 0 -10px 20px -8px rgba(10, 30, 120, .7), inset 0 0 0 1px rgba(255, 255, 255, .12), 0 12px 36px -6px rgba(47, 107, 255, .65), 0 2px 0 rgba(0, 0, 0, .3);
+}
+
+/* Viên "frame by frame": kính lỏng khúc xạ mạnh */
+.pill {
+  background: linear-gradient(180deg, rgba(120, 170, 255, .16) 0%, rgba(40, 90, 230, .1) 55%, rgba(110, 170, 255, .2) 100%);
+  backdrop-filter: url(#lg-refract-strong) blur(2px) saturate(200%) brightness(1.15);
+  border: 1.5px solid rgba(210, 230, 255, .55);
+  box-shadow: inset 3px 3px 0 -1px rgba(255, 255, 255, .55), inset -2px -2px 0 -1px rgba(255, 255, 255, .25), inset 0 -16px 36px -14px rgba(70, 200, 255, .55), 0 0 60px rgba(47, 107, 255, .45), 0 20px 50px -10px rgba(0, 0, 0, .7);
+}
+
+/* Giọt kính lỏng đi theo chuột trong hero */
+.lens {
+  position: absolute; z-index: 2; left: 0; top: 0; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; pointer-events: none; opacity: 0;
+  transition: opacity .4s; will-change: transform;
+  background: radial-gradient(circle at 32% 26%, rgba(255, 255, 255, .35), transparent 32%), radial-gradient(circle at 70% 80%, rgba(120, 200, 255, .18), transparent 45%);
+  -webkit-backdrop-filter: blur(1px) saturate(180%);
+  backdrop-filter: url(#lg-lens) saturate(180%) brightness(1.12);
+  box-shadow: inset 3px 3px 0 -1px rgba(255, 255, 255, .7), inset -3px -3px 0 -1px rgba(255, 255, 255, .25), inset 0 0 30px rgba(255, 255, 255, .12), 0 20px 50px rgba(0, 0, 0, .45);
+}
+.hero:hover .lens.on { opacity: 1; }
+
+/* Avatar hero: logo DT thay cho ảnh mặt */
+.name-tag .avatar-logo { display: grid; place-items: center; font: 700 17px var(--mono); letter-spacing: -.02em; color: #fff;
+  background: radial-gradient(120% 90% at 30% 0%, rgba(255, 255, 255, .45), transparent 55%), linear-gradient(180deg, #4f8bff, #1438b8);
+  border: 1px solid rgba(190, 220, 255, .6); box-shadow: inset 1.5px 1.5px 0 -.5px rgba(255, 255, 255, .8), 0 0 22px rgba(47, 107, 255, .65); }
+
+/* Ảnh Giới thiệu: ảnh duotone xanh — không chồng thêm bộ lọc màu */
+.photo img { filter: none; height: auto; object-position: 50% 40%; }
+.photo::after { background: linear-gradient(180deg, rgba(1, 3, 10, .35), transparent 22%, transparent 55%, rgba(1, 3, 10, .65)); }
+.photo-tag.tl, .photo-tag.bl, .photo-tag.br { padding: 5px 8px; border-radius: 7px; background: rgba(2, 5, 16, .72); backdrop-filter: blur(6px); }
+
+/* Lumetri: nút chọn clip */
+.clip-pick { display: flex; gap: 6px; padding: 10px 12px 0; flex-wrap: wrap; }
+.clip-pick button { display: flex; align-items: center; gap: 8px; padding: 5px 10px 5px 5px; border-radius: 10px; border: 1px solid var(--line-2); background: rgba(6, 12, 32, .6); color: var(--muted); font: 600 11px var(--mono); cursor: pointer; transition: all .2s; }
+.clip-pick button img { width: 44px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 5px; }
+.clip-pick button:hover { color: #fff; border-color: rgba(160, 205, 255, .4); }
+.clip-pick button[aria-pressed="true"] { color: #fff; border-color: rgba(200, 225, 255, .45); background: linear-gradient(180deg, rgba(120, 170, 255, .3), rgba(40, 90, 230, .25)); box-shadow: inset 1.5px 1.5px 0 -0.5px rgba(255, 255, 255, .6), 0 0 20px rgba(47, 107, 255, .4); }
+
+@media (prefers-reduced-motion: reduce) { .lens { display: none; } }
+@media (hover: none), (pointer: coarse) { .lens { display: none; } }
